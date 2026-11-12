@@ -359,5 +359,74 @@
    },
    "dica": "Denunciação caluniosa: **dolo direto**. Falso testemunho: retratação **até a sentença**, vale para o **partícipe**. Escusa familiar: **só no favorecimento pessoal**. Fuga sem violência: **não é crime**."
   }
+ ],
+ "revisao": [
+  {
+   "arquivo": "lmp-1-fundamentos.jpg",
+   "assunto": "LMP",
+   "titulo": "Lei Maria da Penha · fundamentos, proteção e resposta",
+   "erratas": []
+  },
+  {
+   "arquivo": "lmp-2-revisao-visual.jpg",
+   "assunto": "LMP",
+   "titulo": "Lei Maria da Penha · revisão visual",
+   "erratas": [
+    "Desde 2026 são **seis** formas de violência, e não cinco: a **vicária** entrou no art. 7º, VI (Lei 15.384/2026).",
+    "A **monitoração eletrônica** é medida protetiva do **art. 22, VIII** (Lei 15.383/2026). O **art. 24-A** é o **crime de descumprimento** (reclusão de 2 a 5 anos).",
+    "Audiência do **art. 16**: só nos crimes de ação **condicionada** e só se a vítima pedir **expressamente** (Lei 15.380/2026)."
+   ]
+  },
+  {
+   "arquivo": "adm-1-teoria-geral.jpg",
+   "assunto": "ADM",
+   "titulo": "Administração Pública · teoria geral e pontos-chave",
+   "erratas": [
+    "No quadro de abertura, o nome é **Bruno Paiva** (está grafado “Benno”)."
+   ]
+  },
+  {
+   "arquivo": "adm-2-revisao-visual.jpg",
+   "assunto": "ADM",
+   "titulo": "Administração Pública · revisão visual completa",
+   "erratas": [
+    "**Contratação direta ilegal** é o **art. 337-E**; o 337-G é o patrocínio de contratação indevida.",
+    "**Insignificância**: em regra **inaplicável** aos crimes contra a Administração Pública (**Súmula 599/STJ**); exceções: **descaminho** até R$ 20 mil e **cigarros** até 1.000 maços.",
+    "**Progressão de regime**: há regra específica, sim — fica **condicionada à reparação do dano** ou à devolução do produto do ilícito (**art. 33, § 4º**).",
+    "**Desacato** protege o **prestígio da função**, não a honra pessoal do servidor (STF, ADPF 496)."
+   ]
+  },
+  {
+   "arquivo": "adm-3-crimes-em-quadrinhos.jpg",
+   "assunto": "ADM",
+   "titulo": "Administração Pública · os crimes em quadrinhos",
+   "erratas": [
+    "**Concussão**: a pena hoje é de **2 a 12 anos** e multa (Lei 13.964/2019), não 2 a 8.",
+    "**Peculato de uso** de bem infungível (carro oficial devolvido intacto) é, em regra, **atípico** (STF, HC 108.433 AgR); é crime para o **prefeito** (DL 201/67, art. 1º, II)."
+   ]
+  },
+  {
+   "arquivo": "adm-4-capitulo-i.jpg",
+   "assunto": "ADM",
+   "titulo": "Administração Pública · principais crimes do Capítulo I",
+   "erratas": [
+    "**Concussão**: a pena hoje é de **2 a 12 anos** e multa (Lei 13.964/2019), não 2 a 8.",
+    "**Peculato de uso** de bem infungível é, em regra, **atípico** (STF, HC 108.433 AgR); exceção: **prefeito** (DL 201/67).",
+    "O **Capítulo II-A** (arts. 337-B a 337-D) trata dos crimes contra a **Administração Pública estrangeira**, não de “vantagem a árbitro”.",
+    "Não admitem tentativa, além do peculato culposo, os **omissivos próprios** (ex.: arts. 319-A e 320)."
+   ]
+  },
+  {
+   "arquivo": "adm-5-aula-de-revisao.jpg",
+   "assunto": "ADM",
+   "titulo": "Administração Pública · aula de revisão",
+   "erratas": [
+    "**Concussão**: a pena hoje é de **2 a 12 anos** e multa (Lei 13.964/2019), não 2 a 8.",
+    "O aumento do **art. 327, § 2º** (1/3) é para ocupante de **cargo em comissão** ou de **função de direção ou assessoramento** — não para crime “contra a Justiça, a Saúde ou em calamidade”.",
+    "**Corrupção passiva privilegiada** (art. 317, § 2º) é ceder a **pedido ou influência de outrem**, sem vantagem — não é “vantagem de pequeno valor”.",
+    "A reparação do dano antes da sentença irrecorrível **extingue a punibilidade só no peculato culposo** (art. 312, § 3º); não há essa regra na corrupção passiva privilegiada.",
+    "A referência “**Tema 1.089** do STF” não foi localizada no material de aula: confira antes de citar."
+   ]
+  }
  ]
 }

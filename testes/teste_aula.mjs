@@ -64,6 +64,21 @@ await tecla('g');
 ok('A6 · tecla G abre a paleta de grifos', await av(`(()=>{const p=document.getElementById('grf-paleta');return !!p&&!p.hidden})()`));
 await tecla('g');
 ok('A7 · texto justificado e negrito convertidos (sem ** na tela)', !(await av(`document.body.innerText.includes('**')`)) && /p,li,\.txt\{text-align:justify/.test(readFileSync(ARQ, 'utf8')));
+const R = D.revisao || [];
+await tecla('v'); await espera(1500);
+const rv = await av(`({n:document.querySelectorAll('.rev figure').length,err:document.querySelectorAll('.rev .errata li').length,ok:document.querySelectorAll('.rev .semerro').length,
+  carregou:[...document.querySelectorAll('.rev img')].filter(i=>i.complete&&i.naturalWidth>500).length})`);
+const nErr = R.reduce((a, r) => a + r.erratas.length, 0);
+ok(`A9 · tecla V abre a revisão: ${R.length} imagens, todas carregam, ${nErr} correções visíveis`, rv && rv.n === R.length && rv.carregou === R.length && rv.err === nErr && rv.ok === R.filter(r => !r.erratas.length).length, JSON.stringify(rv));
+await print('4-revisao.png');
+await av(`document.querySelector('[data-rev="4"]').click()`); await espera(1200);
+await tecla('+'); await tecla('+');
+const z = await av(`getComputedStyle(document.getElementById('vimg')).transform`);
+await tecla('ArrowRight'); await espera(600);
+const vv = await av(`({on:document.getElementById('vis').classList.contains('on'),num:document.getElementById('vnum').textContent,err:document.getElementById('verr').innerText.length,q:st.q})`);
+await print('5-revisao-visor.png');
+await tecla('Escape'); await espera(300);
+ok('A10 · visor em tela cheia: zoom, → troca de imagem sem mexer nas questões, correções na barra, Esc fecha', z !== 'none' && vv.on && vv.num === '6 / ' + R.length && vv.err > 20 && vv.q === -2 && !(await av(`document.getElementById('vis').classList.contains('on')`)), JSON.stringify(vv) + ' ' + z);
 ok('A8 · nenhum erro de script', erros.length === 0, erros.slice(0, 3).join(' | '));
 ws.close(); nav.kill(); try { rmSync(perfil, { recursive: true, force: true }); } catch { }
 console.log(`\n${res.filter(Boolean).length} de ${res.length} OK`);

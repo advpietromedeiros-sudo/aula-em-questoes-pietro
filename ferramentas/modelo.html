@@ -49,6 +49,26 @@ main{max-width:1180px;margin:0 auto;padding:18px 18px 120px}
 .lista .n{font-weight:900;min-width:2em}
 .atalhos{font-size:.72em;color:var(--suave);margin-top:14px}
 kbd{background:#eef0f4;border:1px solid #cfd5df;border-radius:5px;padding:0 6px;font-family:inherit;font-weight:700}
+.rev{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px;margin-top:12px}
+.rev figure{margin:0;border:1px solid var(--borda);border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.rev button.mini{padding:0;border:0;cursor:zoom-in;background:#f4f5f8;aspect-ratio:3/2;display:block;width:100%}
+.rev button.mini img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.rev figcaption{padding:8px 12px 12px;font-size:.78em}
+.rev figcaption b.t{display:block;font-size:1.05em;margin-bottom:4px}
+.errata{border-left:5px solid var(--verm);background:var(--vfundo);border-radius:0 10px 10px 0;padding:6px 10px;margin-top:6px}
+.errata>b{color:var(--verm)}.errata ul{margin:4px 0 0;padding-left:18px}.errata li{margin:2px 0}
+.semerro{color:var(--verde);font-weight:700;margin-top:6px}
+#vis{position:fixed;inset:0;z-index:50;background:#0b0f17;display:none;flex-direction:column}
+#vis.on{display:flex}
+.vbar{flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 12px;background:#111b2e;color:#fff;font-size:15px;flex-wrap:wrap}
+.vbar .bts{display:flex;gap:6px;align-items:center}
+.vbar button{font:700 15px inherit;font-family:inherit;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:9px;padding:8px 12px;cursor:pointer}
+.vbar button.x{background:#b3261e;border-color:#b3261e}
+#vpalco{flex:1;min-height:0;overflow:hidden;display:flex;align-items:center;justify-content:center;cursor:zoom-in;touch-action:none;position:relative}
+#vis.zoom #vpalco{cursor:grab}
+#vimg{width:100%;height:100%;object-fit:contain;transform-origin:center;user-select:none;transition:transform .12s}
+#verr{flex:none;max-height:28vh;overflow:auto;background:#fde7e5;color:#1b2030;font-size:15px;padding:8px 16px;display:none}
+#verr.on{display:block}#verr b{font-weight:800}
 @media(max-width:700px){.cartao{padding:16px}.alt{grid-template-columns:38px 1fr}#pontos button{width:26px;height:26px}}
 @media print{header,.passo{display:none}.com,.dica{display:block!important}}
 </style></head><body>
@@ -56,9 +76,14 @@ kbd{background:#eef0f4;border:1px solid #cfd5df;border-radius:5px;padding:0 6px;
   <h1><small>Aula em questões · Prof. Pietro Medeiros</small>__TITULO_CURTO__</h1>
   <nav id="pontos" aria-label="Questões"></nav>
   <span id="placar">Turma: 0 ✓ · 0 ✗</span>
-  <div class="ferr"><button id="bCapa" title="Lista de questões (Home)">☰</button><button id="bMenos" title="Letra menor (−)">A−</button><button id="bMais" title="Letra maior (+)">A+</button><button id="bTela" title="Tela cheia (F)">⛶</button></div>
+  <div class="ferr"><button id="bRev" title="Revisão visual (V)">📚 Revisão</button><button id="bCapa" title="Lista de questões (Home)">☰</button><button id="bMenos" title="Letra menor (−)">A−</button><button id="bMais" title="Letra maior (+)">A+</button><button id="bTela" title="Tela cheia (F)">⛶</button></div>
 </header>
 <main id="palco"></main>
+<div id="vis" role="dialog" aria-modal="true"><div class="vbar"><span id="vtit"></span><span class="bts">
+  <button data-v="ant" title="Anterior (←)">←</button><span id="vnum"></span><button data-v="prox" title="Próxima (→)">→</button>
+  <button data-v="menos" title="Diminuir (−)">−</button><button data-v="caber" title="Caber (0)">Caber</button><button data-v="mais" title="Aumentar (+)">+</button>
+  <button data-v="err" title="Mostrar/ocultar as correções (C)">⚠ Correções</button><button data-v="fechar" class="x" title="Fechar (Esc)">✕</button></span></div>
+  <div id="vpalco"><img id="vimg" alt="" draggable="false"></div><div id="verr"></div></div>
 <script id="dados" type="application/json">__DADOS__</script>
 <script>
 'use strict';
@@ -87,8 +112,8 @@ function capa() {
   const grupos = Object.keys(D.assuntos).map(a => `<h3 style="margin:18px 0 0"><span class="rot"><span class="ass ${a}">${esc(D.assuntos[a])}</span></span></h3>` +
     `<div class="lista">${Q.map((q, i) => q.assunto === a ? `<button data-ir="${i}"><span class="n">${i + 1}.</span><span>${esc(q.tema)}${st.rev[i] ? ' ✔' : ''}</span></button>` : '').join('')}</div>`).join('');
   $('palco').innerHTML = `<section class="cartao capa"><div class="rot">Aula em questões · estilo FGV</div><h2>${esc(D.titulo)}</h2><p>${esc(D.subtitulo)}. Base: ${esc(D.base)}</p>${grupos}` +
-    `<p class="atalhos"><kbd>→</kbd> avança (revela o gabarito e, depois, um comentário por vez) · <kbd>←</kbd> volta · <kbd>A</kbd>–<kbd>E</kbd> marca a resposta da turma · <kbd>R</kbd> revela tudo · <kbd>+</kbd>/<kbd>−</kbd> letra · <kbd>F</kbd> tela cheia · <kbd>G</kbd> grifos · <kbd>Home</kbd> esta lista</p>` +
-    `<div class="passo"><span></span><button class="bt" data-ir="0">Começar pela questão 1 →</button></div></section>`;
+    `<p class="atalhos"><kbd>→</kbd> avança (revela o gabarito e, depois, um comentário por vez) · <kbd>←</kbd> volta · <kbd>A</kbd>–<kbd>E</kbd> marca a resposta da turma · <kbd>R</kbd> revela tudo · <kbd>+</kbd>/<kbd>−</kbd> letra · <kbd>F</kbd> tela cheia · <kbd>G</kbd> grifos · <kbd>V</kbd> revisão visual · <kbd>Home</kbd> esta lista</p>` +
+    `<div class="passo">${R.length ? `<button class="bt sec" id="bRev">📚 Revisão visual (${R.length} imagens)</button>` : '<span></span>'}<button class="bt" data-ir="0">Começar pela questão 1 →</button></div></section>`;
 }
 function ordemComent(q) { return [q.gab].concat(L.filter(x => x !== q.gab)); }   // primeiro a correta, depois as erradas
 function mostrar(rolar) {
@@ -114,7 +139,7 @@ function fim() {
   const por = a => { const idx = Q.map((q, i) => i).filter(i => Q[i].assunto === a); return `${idx.filter(i => st.rev[i] && st.marc[i] === Q[i].gab).length} de ${idx.length}`; };
   $('palco').innerHTML = `<section class="cartao capa"><div class="rot">Fim da aula</div><h2>Placar da turma: ${ok} acerto${ok === 1 ? '' : 's'} em ${Q.length}</h2>` +
     `<p>${Object.keys(D.assuntos).map(a => `<b>${esc(D.assuntos[a])}:</b> ${por(a)}`).join(' · ')}${no ? ` · <b>Erros:</b> ${no}` : ''}${sem ? ` · <b>Sem resposta marcada:</b> ${sem}` : ''}</p>` +
-    `<div class="passo"><button class="bt sec" id="bZerar">Zerar respostas</button><button class="bt" id="bLista">Lista de questões</button></div></section>`;
+    `<div class="passo"><button class="bt sec" id="bZerar">Zerar respostas</button>${R.length ? '<button class="bt sec" id="bRev">📚 Revisão visual</button>' : ''}<button class="bt" id="bLista">Lista de questões</button></div></section>`;
 }
 function avancar() {
   const i = st.q; if (i < 0) return ir(0); if (i >= Q.length) return;
@@ -130,18 +155,59 @@ function voltar() {
 }
 function marcar(x) { const i = st.q; if (i < 0 || i >= Q.length || st.rev[i]) return; st.marc[i] = st.marc[i] === x ? undefined : x; mostrar(false); }
 function tudo() { const i = st.q; if (i < 0 || i >= Q.length) return; st.rev[i] = 1; st.passo[i] = L.length + 1; mostrar(true); }
+/* ---------- revisão visual (imagens do professor, com as correções embaixo) ---------- */
+const R = D.revisao || [];
+const errHtml = r => r.erratas && r.erratas.length ? `<div class="errata"><b>⚠ Corrija na imagem:</b><ul>${r.erratas.map(e => `<li>${neg(e)}</li>`).join('')}</ul></div>` : `<div class="semerro">✔ Conferida: sem correções.</div>`;
+function revisao() {
+  st.q = -2; salvar(); placar();
+  $('palco').innerHTML = `<section class="cartao capa"><div class="rot">Revisão visual</div><h2>Revisão em imagens</h2>` +
+    `<p>Clique para abrir em tela cheia (zoom com <kbd>+</kbd>/<kbd>−</kbd>, rodinha ou duplo clique; <kbd>←</kbd> <kbd>→</kbd> trocam; <kbd>Esc</kbd> fecha). As imagens foram conferidas com o caderno: onde há erro, a correção vem logo abaixo.</p>` +
+    Object.keys(D.assuntos).map(a => R.some(r => r.assunto === a) ? `<h3 style="margin:18px 0 0"><span class="rot"><span class="ass ${a}">${esc(D.assuntos[a])}</span></span></h3><div class="rev">` +
+      R.map((r, i) => r.assunto !== a ? '' : `<figure><button class="mini" data-rev="${i}" title="Abrir em tela cheia"><img loading="lazy" src="revisao/${esc(r.arquivo)}" alt="${esc(r.titulo)}"></button><figcaption><b class="t">${esc(r.titulo)}</b>${errHtml(r)}</figcaption></figure>`).join('') + `</div>` : '').join('') +
+    `<div class="passo"><button class="bt sec" id="bLista">← Lista de questões</button><button class="bt" data-ir="0">Ir para as questões →</button></div></section>`;
+  scrollTo(0, 0);
+}
+let V = null, vz = 1, vx = 0, vy = 0, arr = null;
+const vis = $('vis'), vimg = $('vimg'), vpalco = $('vpalco');
+function vdes() { vimg.style.transform = `translate(${vx}px,${vy}px) scale(${vz})`; vis.classList.toggle('zoom', vz > 1.001); }
+function vcaber() { vz = 1; vx = 0; vy = 0; vdes(); }
+function vlim() { const r = vpalco.getBoundingClientRect(), mx = r.width * (vz - 1) / 2, my = r.height * (vz - 1) / 2; vx = Math.max(-mx, Math.min(mx, vx)); vy = Math.max(-my, Math.min(my, vy)); }
+function vzoom(f, cx, cy) { const r = vpalco.getBoundingClientRect(), nz = Math.max(1, Math.min(6, vz * f)); if (cx == null) { cx = r.left + r.width / 2; cy = r.top + r.height / 2; }
+  const ox = cx - (r.left + r.width / 2), oy = cy - (r.top + r.height / 2); vx = ox - (ox - vx) * nz / vz; vy = oy - (oy - vy) * nz / vz; vz = nz; if (vz <= 1.001) vcaber(); else { vlim(); vdes(); } }
+function vmostra(i) { i = (i + R.length) % R.length; V = i; const r = R[i];
+  vimg.src = 'revisao/' + r.arquivo; vimg.alt = r.titulo; $('vtit').textContent = r.titulo; $('vnum').textContent = (i + 1) + ' / ' + R.length;
+  $('verr').innerHTML = r.erratas && r.erratas.length ? '<b>⚠ Corrija na imagem:</b> ' + r.erratas.map(neg).join(' · ') : '<b>✔ Conferida:</b> sem correções.';
+  vcaber(); }
+function vabre(i) { vmostra(i); vis.classList.add('on'); $('verr').classList.add('on'); try { const p = vis.requestFullscreen && vis.requestFullscreen(); if (p && p.catch) p.catch(() => { }); } catch (e) { } }
+function vfecha() { vis.classList.remove('on'); V = null; try { if (document.fullscreenElement) document.exitFullscreen(); } catch (e) { } }
+vis.addEventListener('click', e => { const b = e.target.closest('[data-v]'); if (!b) return; const x = b.dataset.v;
+  if (x === 'fechar') vfecha(); else if (x === 'ant') vmostra(V - 1); else if (x === 'prox') vmostra(V + 1); else if (x === 'mais') vzoom(1.4); else if (x === 'menos') vzoom(1 / 1.4); else if (x === 'caber') vcaber(); else if (x === 'err') $('verr').classList.toggle('on'); });
+vpalco.addEventListener('dblclick', e => { if (vz > 1.001) vcaber(); else vzoom(2.5, e.clientX, e.clientY); });
+vpalco.addEventListener('wheel', e => { e.preventDefault(); vzoom(e.deltaY < 0 ? 1.18 : 1 / 1.18, e.clientX, e.clientY); }, { passive: false });
+vpalco.addEventListener('pointerdown', e => { if (vz <= 1.001) return; arr = { x: e.clientX, y: e.clientY, vx, vy }; vpalco.setPointerCapture(e.pointerId); });
+vpalco.addEventListener('pointermove', e => { if (!arr) return; vx = arr.vx + e.clientX - arr.x; vy = arr.vy + e.clientY - arr.y; vlim(); vdes(); });
+vpalco.addEventListener('pointerup', () => { arr = null; });
 function tela() { const d = document; try { if (!d.fullscreenElement) { const r = d.documentElement.requestFullscreen(); if (r && r.catch) r.catch(() => { }); } else d.exitFullscreen(); } catch (e) { } }
 
 document.addEventListener('click', e => {
-  const t = e.target.closest('[data-ir],[data-alt],#bProx,#bAnt,#bCapa,#bMais,#bMenos,#bTela,#bZerar,#bLista'); if (!t) return;
+  const t = e.target.closest('[data-ir],[data-alt],[data-rev],#bProx,#bAnt,#bCapa,#bRev,#bMais,#bMenos,#bTela,#bZerar,#bLista'); if (!t) return;
+  if (t.dataset.rev != null) return vabre(+t.dataset.rev);
   if (t.dataset.ir != null) return ir(+t.dataset.ir);
   if (t.dataset.alt) return marcar(t.dataset.alt);
-  ({ bProx: avancar, bAnt: voltar, bCapa: capa, bLista: capa, bMais: () => zoom(st.z + .1), bMenos: () => zoom(st.z - .1), bTela: tela,
+  ({ bProx: avancar, bAnt: voltar, bCapa: capa, bLista: capa, bRev: revisao, bMais: () => zoom(st.z + .1), bMenos: () => zoom(st.z - .1), bTela: tela,
     bZerar: () => { st.marc = {}; st.rev = {}; st.passo = {}; capa(); } })[t.id]();
 });
 document.addEventListener('keydown', e => {
   if (e.ctrlKey || e.metaKey || e.altKey || /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
   const k = e.key;
+  if (V != null) {  // visor aberto: as teclas são dele
+    e.preventDefault();
+    if (k === 'Escape') vfecha(); else if (k === 'ArrowRight' || k === ' ') vmostra(V + 1); else if (k === 'ArrowLeft') vmostra(V - 1);
+    else if (k === '+' || k === '=') vzoom(1.4); else if (k === '-') vzoom(1 / 1.4); else if (k === '0') vcaber(); else if (k === 'c' || k === 'C') $('verr').classList.toggle('on');
+    return;
+  }
+  if (k === 'v' || k === 'V') return revisao();
+  if (st.q === -2) return;
   if (k === 'ArrowRight' || k === ' ' || k === 'PageDown' || k === 'Enter') { e.preventDefault(); avancar(); }
   else if (k === 'ArrowLeft' || k === 'PageUp') { e.preventDefault(); voltar(); }
   else if (/^[a-eA-E]$/.test(k)) marcar(k.toUpperCase());
@@ -150,7 +216,7 @@ document.addEventListener('keydown', e => {
   else if (k === 'f' || k === 'F') tela(); else if (k === 'Home') capa();
 });
 zoom(st.z || 1);
-if (st.q >= 0 && st.q < Q.length) mostrar(false); else if (st.q >= Q.length) fim(); else capa();
+if (st.q >= 0 && st.q < Q.length) mostrar(false); else if (st.q >= Q.length) fim(); else if (st.q === -2 && R.length) revisao(); else capa();
 </script>
 <script>window.GRIFA_CHAVE = 'grifos:v1:aula-questoes:__TITULO_CURTO__';</script>
 <script>

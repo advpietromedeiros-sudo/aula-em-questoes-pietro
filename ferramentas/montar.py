@@ -70,6 +70,18 @@ def main() -> None:
         dados = json.dumps(d, ensure_ascii=False).replace("</", "<\\/")
         html = (MODELO.replace("__TITULO_CURTO__", curto).replace("__TITULO__", d["titulo"])
                 .replace("__DADOS__", dados).replace("__GRIFA__", GRIFA))
+        rev = d.get("revisao") or []
+        if rev:
+            import shutil
+            destino = RAIZ / "aulas" / "revisao"
+            destino.mkdir(exist_ok=True)
+            for r in rev:
+                orig = RAIZ / "fontes" / "revisao" / r["arquivo"]
+                if not orig.exists():
+                    sys.exit(f"{fonte.name}: imagem da revisão não encontrada: {orig.name}")
+                if r["assunto"] not in d["assuntos"]:
+                    sys.exit(f"{fonte.name}: revisão {orig.name} com assunto desconhecido")
+                shutil.copyfile(orig, destino / r["arquivo"])
         saida = RAIZ / "aulas" / f"{fonte.stem}.html"
         saida.write_text(html, encoding="utf-8", newline="\n")
         gab = "".join(q["gab"] for q in d["questoes"])
