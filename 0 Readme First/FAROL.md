@@ -1,4 +1,4 @@
-# FAROL — Aula em Questões · atualizado em 12/11/2026, 09h50
+# FAROL — Aula em Questões · atualizado em 12/11/2026, 09h43
 
 ## Estado
 
