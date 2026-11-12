@@ -1,4 +1,4 @@
-# FAROL — Aula em Questões · atualizado em 12/11/2026, 10h55
+# FAROL — Aula em Questões · atualizado em 12/11/2026, 11h23
 
 ## Estado
 
@@ -12,10 +12,13 @@
 - ✅ **12/11/2026, 10h4x — publicada** (titular: "pode publicar"): https://advpietromedeiros-sudo.github.io/aula-em-questoes-pietro/
   (repositório **público**, GitHub Pages). Teste de sala rodado no endereço publicado: 10/10.
 
+- ✅ **12/11/2026, 11h2x — revisão atualizada** com as 3 imagens reenviadas pelo titular: a versão ampliada substitui a antiga
+  "aula de revisão"; entram "aula 2 · correções" e "licitações". 9 imagens, 31 correções na tela; publicado e testado no site (10/10).
+
 ## Próximos passos
 
 1. Titular revisar as questões em sala; ajustes vão em `fontes/lmp-e-adm-publica.json` e se remonta.
-2. Refazer as imagens de revisão de Administração Pública com as penas corrigidas (as correções estão na tela).
+2. Imagens que ainda pedem refação: "crimes em quadrinhos" e "capítulo I" (concussão 2 a 8) e "licitações" (9 erros).
 
 ## O que fica rodando
 
