@@ -5,6 +5,7 @@ Confere antes de gravar: 5 alternativas (A a E) e 5 comentários por questão; o
 Uso: python -I ferramentas/montar.py
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -13,6 +14,30 @@ RAIZ = Path(__file__).resolve().parent.parent
 MODELO = (RAIZ / "ferramentas" / "modelo.html").read_text(encoding="utf-8")
 GRIFA = (RAIZ / "ferramentas" / "grifa.js").read_text(encoding="utf-8")
 LETRAS = ["A", "B", "C", "D", "E"]
+
+
+ABSOLUTAS = re.compile(r"\b(apenas|somente|só|sempre|nunca|necessariamente|exclusivamente|únic[ao]|todo|toda|qualquer|"
+                       r"nenhum|nenhuma|vedad[ao]|jamais)\b", re.I)
+
+
+def vicios(d: dict) -> list:
+    """Vícios que entregam o gabarito sem saber o conteúdo (pedido do titular, 12/11/2026):
+    a correta ser a alternativa mais longa; palavras absolutas só nas erradas. Só vale para questões de alternativas longas
+    (as de "I, II e III" têm alternativas curtas e não entram na conta)."""
+    longas = [q for q in d["questoes"] if sum(len(v) for v in q["alts"].values()) / 5 > 40]
+    if not longas:
+        return []
+    maior = sum(1 for q in longas if max(q["alts"], key=lambda x: len(q["alts"][x])) == q["gab"])
+    abs_c = sum(1 for q in longas if ABSOLUTAS.search(q["alts"][q["gab"]]))
+    abs_e = sum(1 for q in longas for x in LETRAS if x != q["gab"] and ABSOLUTAS.search(q["alts"][x]))
+    print(f"  vícios: correta é a mais longa em {maior}/{len(longas)} · palavra absoluta na correta em {abs_c}/{len(longas)}"
+          f" · nas erradas em {abs_e}/{4 * len(longas)}")
+    e = []
+    if maior > len(longas) / 4:
+        e.append(f"a correta é a alternativa mais longa em {maior} de {len(longas)} questões (máximo: 1/4)")
+    if abs_e and not abs_c:
+        e.append("palavras absolutas só aparecem nas alternativas erradas")
+    return e
 
 
 def conferir(d: dict, nome: str) -> None:
@@ -29,6 +54,7 @@ def conferir(d: dict, nome: str) -> None:
             erros.append(f"q{i}: assunto {q['assunto']} não está em 'assuntos'")
         if not q.get("dica"):
             erros.append(f"q{i}: falta a dica do professor")
+    erros += vicios(d)
     vazios = [a for a in d["assuntos"] if not any(q["assunto"] == a for q in d["questoes"])]
     erros += [f"assunto sem questão: {a}" for a in vazios]
     if erros:
