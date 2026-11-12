@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__TITULO__ · Prof. Pietro Medeiros</title>
+<!-- Gerado por ferramentas/montar.py a partir de fontes/*.json — não edite à mão. -->
+<style>
+:root{--fundo:#eef0f4;--cartao:#fff;--tinta:#1b2030;--suave:#5b6474;--borda:#dfe3ea;--azul:#1f4fb4;--ouro:#b07d1e;--verde:#1f7a46;--gfundo:#e3f4ea;--verm:#c62828;--vfundo:#fde7e5;--marca:#fff3c4;
+  --LMP:#7b2d8e;--ADM:#1f4fb4;--z:1}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--fundo);color:var(--tinta);font:calc(20px*var(--z))/1.6 Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+p,li,.txt{text-align:justify;hyphens:auto}
+b{font-weight:800}
+header{position:sticky;top:0;z-index:10;background:#111b2e;color:#fff;padding:8px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+header h1{margin:0;font-size:17px;line-height:1.2}header h1 small{display:block;font-size:11px;color:#e7c46b;letter-spacing:.08em;text-transform:uppercase}
+#pontos{display:flex;gap:5px;flex-wrap:wrap;flex:1;justify-content:center}
+#pontos button{width:30px;height:30px;border-radius:50%;border:2px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:700 12px inherit;font-family:inherit;cursor:pointer}
+#pontos button.LMP{border-color:#c79ad3}#pontos button.ADM{border-color:#9db8f0}
+#pontos button.ok{background:#2e9d5b;border-color:#2e9d5b}#pontos button.no{background:#c0392b;border-color:#c0392b}
+#pontos button.cur{outline:3px solid #e7c46b;outline-offset:2px}
+.ferr{display:flex;gap:6px}
+.ferr button,.bt{font:700 14px inherit;font-family:inherit;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;border-radius:9px;padding:7px 11px;cursor:pointer}
+.ferr button:hover{background:rgba(255,255,255,.2)}
+#placar{font:700 14px inherit;font-family:inherit;background:#e7c46b;color:#1b2030;border-radius:999px;padding:5px 12px;white-space:nowrap}
+main{max-width:1180px;margin:0 auto;padding:18px 18px 120px}
+.cartao{background:var(--cartao);border:1px solid var(--borda);border-radius:16px;padding:22px 30px;box-shadow:0 6px 24px rgba(20,30,60,.08)}
+.rot{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.72em;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--suave)}
+.rot .ass{color:#fff;border-radius:999px;padding:3px 11px}
+.ass.LMP{background:var(--LMP)}.ass.ADM{background:var(--ADM)}
+.enun p{margin:.55em 0}
+.comando{font-weight:800;margin:.8em 0 .5em}
+.alt{display:grid;grid-template-columns:48px 1fr;gap:4px 12px;width:100%;text-align:left;border:2px solid var(--borda);background:#fff;border-radius:12px;padding:10px 14px;margin:9px 0;cursor:pointer;font:inherit;color:inherit;transition:border-color .2s,background .2s}
+.alt:hover{border-color:#b9c3d6}
+.alt .l{font-weight:900;font-size:1.05em;display:flex;align-items:flex-start;justify-content:center;border-radius:9px;background:var(--fundo);height:1.9em;line-height:1.9em}
+.alt.marcada{border-color:var(--ouro);background:var(--marca)}
+.alt.certa{border-color:var(--verde);background:var(--gfundo)}.alt.certa .l{background:var(--verde);color:#fff}
+.alt.errada{border-color:var(--verm);background:var(--vfundo)}.alt.errada .l{background:var(--verm);color:#fff}
+.com{grid-column:2;display:none;font-size:.9em;border-top:1px dashed #c9cfda;margin-top:6px;padding-top:6px}
+.com.on{display:block;animation:entra .4s ease}
+@keyframes entra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.dica{display:none;margin-top:14px;border-left:6px solid var(--ouro);background:#fff8e6;border-radius:0 12px 12px 0;padding:10px 16px}
+.dica.on{display:block;animation:entra .4s ease}
+.dica b:first-child{color:var(--ouro)}
+.passo{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.passo .bt{background:var(--azul);border-color:var(--azul)}.passo .bt.sec{background:#fff;color:var(--tinta);border-color:var(--borda)}
+.passo span{color:var(--suave);font-size:.75em}
+.capa h2{margin:.1em 0 .3em;font-size:1.6em;line-height:1.2}
+.lista{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px;margin-top:14px}
+.lista button{display:flex;gap:10px;align-items:flex-start;text-align:left;border:1px solid var(--borda);background:#fff;border-radius:12px;padding:10px 12px;cursor:pointer;font:inherit;font-size:.82em;color:inherit}
+.lista button:hover{border-color:var(--azul)}
+.lista .n{font-weight:900;min-width:2em}
+.atalhos{font-size:.72em;color:var(--suave);margin-top:14px}
+kbd{background:#eef0f4;border:1px solid #cfd5df;border-radius:5px;padding:0 6px;font-family:inherit;font-weight:700}
+@media(max-width:700px){.cartao{padding:16px}.alt{grid-template-columns:38px 1fr}#pontos button{width:26px;height:26px}}
+@media print{header,.passo{display:none}.com,.dica{display:block!important}}
+</style></head><body>
+<header>
+  <h1><small>Aula em questões · Prof. Pietro Medeiros</small>__TITULO_CURTO__</h1>
+  <nav id="pontos" aria-label="Questões"></nav>
+  <span id="placar">Turma: 0 ✓ · 0 ✗</span>
+  <div class="ferr"><button id="bCapa" title="Lista de questões (Home)">☰</button><button id="bMenos" title="Letra menor (−)">A−</button><button id="bMais" title="Letra maior (+)">A+</button><button id="bTela" title="Tela cheia (F)">⛶</button></div>
+</header>
+<main id="palco"></main>
+<script id="dados" type="application/json">__DADOS__</script>
+<script>
+'use strict';
+const D = JSON.parse(document.getElementById('dados').textContent), Q = D.questoes, L = ['A', 'B', 'C', 'D', 'E'];
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const neg = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\*(.+?)\*/g, '<i>$1</i>');
+const par = s => String(s).split(/\n\s*\n|\n/).map(t => `<p>${neg(t)}</p>`).join('');
+const CHAVE = 'aula-questoes:' + D.titulo;
+let st = { q: -1, marc: {}, rev: {}, passo: {}, z: 1 };
+try { st = Object.assign(st, JSON.parse(localStorage.getItem(CHAVE) || '{}')); } catch (e) { }
+const salvar = () => { try { localStorage.setItem(CHAVE, JSON.stringify(st)); } catch (e) { } };
+function zoom(v) { st.z = Math.max(.8, Math.min(1.8, Math.round(v * 10) / 10)); document.documentElement.style.setProperty('--z', st.z); salvar(); }
+
+function placar() {
+  let ok = 0, no = 0;
+  Q.forEach((q, i) => { if (st.rev[i] && st.marc[i]) { if (st.marc[i] === q.gab) ok++; else no++; } });
+  $('placar').textContent = `Turma: ${ok} ✓ · ${no} ✗`;
+  $('pontos').innerHTML = Q.map((q, i) => {
+    const r = st.rev[i] && st.marc[i] ? (st.marc[i] === q.gab ? 'ok' : 'no') : '';
+    return `<button class="${q.assunto} ${r} ${i === st.q ? 'cur' : ''}" data-ir="${i}" title="Questão ${i + 1} · ${esc(D.assuntos[q.assunto])}">${i + 1}</button>`;
+  }).join('');
+}
+function capa() {
+  st.q = -1; salvar(); placar();
+  const grupos = Object.keys(D.assuntos).map(a => `<h3 style="margin:18px 0 0"><span class="rot"><span class="ass ${a}">${esc(D.assuntos[a])}</span></span></h3>` +
+    `<div class="lista">${Q.map((q, i) => q.assunto === a ? `<button data-ir="${i}"><span class="n">${i + 1}.</span><span>${esc(q.tema)}${st.rev[i] ? ' ✔' : ''}</span></button>` : '').join('')}</div>`).join('');
+  $('palco').innerHTML = `<section class="cartao capa"><div class="rot">Aula em questões · estilo FGV</div><h2>${esc(D.titulo)}</h2><p>${esc(D.subtitulo)}. Base: ${esc(D.base)}</p>${grupos}` +
+    `<p class="atalhos"><kbd>→</kbd> avança (revela o gabarito e, depois, um comentário por vez) · <kbd>←</kbd> volta · <kbd>A</kbd>–<kbd>E</kbd> marca a resposta da turma · <kbd>R</kbd> revela tudo · <kbd>+</kbd>/<kbd>−</kbd> letra · <kbd>F</kbd> tela cheia · <kbd>G</kbd> grifos · <kbd>Home</kbd> esta lista</p>` +
+    `<div class="passo"><span></span><button class="bt" data-ir="0">Começar pela questão 1 →</button></div></section>`;
+}
+function ordemComent(q) { return [q.gab].concat(L.filter(x => x !== q.gab)); }   // primeiro a correta, depois as erradas
+function mostrar(rolar) {
+  const i = st.q, q = Q[i]; if (!q) return capa();
+  const rev = !!st.rev[i], p = st.passo[i] || 0, ord = ordemComent(q), vis = new Set(ord.slice(0, p));
+  $('palco').innerHTML = `<section class="cartao" id="qcard"><div class="rot"><span>Questão ${i + 1} de ${Q.length}</span><span class="ass ${q.assunto}">${esc(D.assuntos[q.assunto])}</span><span>${esc(q.tema)}</span></div>` +
+    `<div class="enun">${par(q.enunciado)}</div><div class="comando">${neg(q.comando)}</div>` +
+    L.map(x => { let c = 'alt'; if (rev) { if (x === q.gab) c += ' certa'; else if (st.marc[i] === x) c += ' errada'; } else if (st.marc[i] === x) c += ' marcada';
+      return `<button class="${c}" data-alt="${x}" id="alt${x}"><span class="l">${x}</span><span class="txt">${neg(q.alts[x])}</span><span class="com ${vis.has(x) ? 'on' : ''}" id="com${x}">${neg(q.coment[x])}</span></button>`; }).join('') +
+    `<div class="dica ${p > L.length ? 'on' : ''}" id="dica"><b>💡 Dica do professor:</b> ${neg(q.dica)}</div>` +
+    `<div class="passo"><button class="bt sec" id="bAnt">← Anterior</button><span>${rev ? (p <= L.length ? `Comentário ${Math.min(p, 5)} de 5` : 'Questão comentada') : (st.marc[i] ? `Turma marcou ${st.marc[i]}` : 'Marque a resposta da turma (A a E)')}</span>` +
+    `<button class="bt" id="bProx">${!rev ? 'Revelar gabarito →' : p < L.length ? 'Próximo comentário →' : p === L.length ? 'Dica do professor →' : (i < Q.length - 1 ? 'Próxima questão →' : 'Ver o placar →')}</button></div></section>`;
+  placar(); salvar();
+  if (rolar) {
+    const alvo = !rev ? $('qcard') : p === 0 ? $('alt' + q.gab) : p > L.length ? $('dica') : $('alt' + ord[p - 1]);
+    setTimeout(() => alvo && alvo.scrollIntoView({ block: alvo.offsetHeight > innerHeight * .8 ? 'start' : 'center', behavior: 'smooth' }), 40);
+  }
+}
+function ir(i) { st.q = i; mostrar(false); scrollTo(0, 0); }
+function fim() {
+  st.q = Q.length; salvar(); placar();
+  let ok = 0, no = 0, sem = 0; Q.forEach((q, i) => { if (!st.marc[i] || !st.rev[i]) sem++; else if (st.marc[i] === q.gab) ok++; else no++; });
+  const por = a => { const idx = Q.map((q, i) => i).filter(i => Q[i].assunto === a); return `${idx.filter(i => st.rev[i] && st.marc[i] === Q[i].gab).length} de ${idx.length}`; };
+  $('palco').innerHTML = `<section class="cartao capa"><div class="rot">Fim da aula</div><h2>Placar da turma: ${ok} acerto${ok === 1 ? '' : 's'} em ${Q.length}</h2>` +
+    `<p>${Object.keys(D.assuntos).map(a => `<b>${esc(D.assuntos[a])}:</b> ${por(a)}`).join(' · ')}${no ? ` · <b>Erros:</b> ${no}` : ''}${sem ? ` · <b>Sem resposta marcada:</b> ${sem}` : ''}</p>` +
+    `<div class="passo"><button class="bt sec" id="bZerar">Zerar respostas</button><button class="bt" id="bLista">Lista de questões</button></div></section>`;
+}
+function avancar() {
+  const i = st.q; if (i < 0) return ir(0); if (i >= Q.length) return;
+  if (!st.rev[i]) { st.rev[i] = 1; st.passo[i] = 0; return mostrar(true); }
+  if ((st.passo[i] || 0) <= L.length) { st.passo[i] = (st.passo[i] || 0) + 1; return mostrar(true); }
+  if (i < Q.length - 1) ir(i + 1); else fim();
+}
+function voltar() {
+  const i = st.q; if (i >= Q.length) return ir(Q.length - 1); if (i < 0) return;
+  if (st.rev[i] && (st.passo[i] || 0) > 0) { st.passo[i]--; return mostrar(true); }
+  if (st.rev[i]) { st.rev[i] = 0; return mostrar(true); }
+  if (i > 0) { st.q = i - 1; mostrar(false); scrollTo(0, 0); } else capa();
+}
+function marcar(x) { const i = st.q; if (i < 0 || i >= Q.length || st.rev[i]) return; st.marc[i] = st.marc[i] === x ? undefined : x; mostrar(false); }
+function tudo() { const i = st.q; if (i < 0 || i >= Q.length) return; st.rev[i] = 1; st.passo[i] = L.length + 1; mostrar(true); }
+function tela() { const d = document; try { if (!d.fullscreenElement) { const r = d.documentElement.requestFullscreen(); if (r && r.catch) r.catch(() => { }); } else d.exitFullscreen(); } catch (e) { } }
+
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-ir],[data-alt],#bProx,#bAnt,#bCapa,#bMais,#bMenos,#bTela,#bZerar,#bLista'); if (!t) return;
+  if (t.dataset.ir != null) return ir(+t.dataset.ir);
+  if (t.dataset.alt) return marcar(t.dataset.alt);
+  ({ bProx: avancar, bAnt: voltar, bCapa: capa, bLista: capa, bMais: () => zoom(st.z + .1), bMenos: () => zoom(st.z - .1), bTela: tela,
+    bZerar: () => { st.marc = {}; st.rev = {}; st.passo = {}; capa(); } })[t.id]();
+});
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey || e.metaKey || e.altKey || /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+  const k = e.key;
+  if (k === 'ArrowRight' || k === ' ' || k === 'PageDown' || k === 'Enter') { e.preventDefault(); avancar(); }
+  else if (k === 'ArrowLeft' || k === 'PageUp') { e.preventDefault(); voltar(); }
+  else if (/^[a-eA-E]$/.test(k)) marcar(k.toUpperCase());
+  else if (k === 'r' || k === 'R') tudo();
+  else if (k === '+' || k === '=') zoom(st.z + .1); else if (k === '-') zoom(st.z - .1);
+  else if (k === 'f' || k === 'F') tela(); else if (k === 'Home') capa();
+});
+zoom(st.z || 1);
+if (st.q >= 0 && st.q < Q.length) mostrar(false); else if (st.q >= Q.length) fim(); else capa();
+</script>
+<script>window.GRIFA_CHAVE = 'grifos:v1:aula-questoes:__TITULO_CURTO__';</script>
+<script>
+__GRIFA__
+</script>
+</body></html>

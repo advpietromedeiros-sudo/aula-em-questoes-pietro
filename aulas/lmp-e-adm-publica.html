@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aula em Questões · Lei Maria da Penha e Crimes contra a Administração Pública · Prof. Pietro Medeiros</title>
+<!-- Gerado por ferramentas/montar.py a partir de fontes/*.json — não edite à mão. -->
+<style>
+:root{--fundo:#eef0f4;--cartao:#fff;--tinta:#1b2030;--suave:#5b6474;--borda:#dfe3ea;--azul:#1f4fb4;--ouro:#b07d1e;--verde:#1f7a46;--gfundo:#e3f4ea;--verm:#c62828;--vfundo:#fde7e5;--marca:#fff3c4;
+  --LMP:#7b2d8e;--ADM:#1f4fb4;--z:1}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--fundo);color:var(--tinta);font:calc(20px*var(--z))/1.6 Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+p,li,.txt{text-align:justify;hyphens:auto}
+b{font-weight:800}
+header{position:sticky;top:0;z-index:10;background:#111b2e;color:#fff;padding:8px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+header h1{margin:0;font-size:17px;line-height:1.2}header h1 small{display:block;font-size:11px;color:#e7c46b;letter-spacing:.08em;text-transform:uppercase}
+#pontos{display:flex;gap:5px;flex-wrap:wrap;flex:1;justify-content:center}
+#pontos button{width:30px;height:30px;border-radius:50%;border:2px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:700 12px inherit;font-family:inherit;cursor:pointer}
+#pontos button.LMP{border-color:#c79ad3}#pontos button.ADM{border-color:#9db8f0}
+#pontos button.ok{background:#2e9d5b;border-color:#2e9d5b}#pontos button.no{background:#c0392b;border-color:#c0392b}
+#pontos button.cur{outline:3px solid #e7c46b;outline-offset:2px}
+.ferr{display:flex;gap:6px}
+.ferr button,.bt{font:700 14px inherit;font-family:inherit;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;border-radius:9px;padding:7px 11px;cursor:pointer}
+.ferr button:hover{background:rgba(255,255,255,.2)}
+#placar{font:700 14px inherit;font-family:inherit;background:#e7c46b;color:#1b2030;border-radius:999px;padding:5px 12px;white-space:nowrap}
+main{max-width:1180px;margin:0 auto;padding:18px 18px 120px}
+.cartao{background:var(--cartao);border:1px solid var(--borda);border-radius:16px;padding:22px 30px;box-shadow:0 6px 24px rgba(20,30,60,.08)}
+.rot{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.72em;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--suave)}
+.rot .ass{color:#fff;border-radius:999px;padding:3px 11px}
+.ass.LMP{background:var(--LMP)}.ass.ADM{background:var(--ADM)}
+.enun p{margin:.55em 0}
+.comando{font-weight:800;margin:.8em 0 .5em}
+.alt{display:grid;grid-template-columns:48px 1fr;gap:4px 12px;width:100%;text-align:left;border:2px solid var(--borda);background:#fff;border-radius:12px;padding:10px 14px;margin:9px 0;cursor:pointer;font:inherit;color:inherit;transition:border-color .2s,background .2s}
+.alt:hover{border-color:#b9c3d6}
+.alt .l{font-weight:900;font-size:1.05em;display:flex;align-items:flex-start;justify-content:center;border-radius:9px;background:var(--fundo);height:1.9em;line-height:1.9em}
+.alt.marcada{border-color:var(--ouro);background:var(--marca)}
+.alt.certa{border-color:var(--verde);background:var(--gfundo)}.alt.certa .l{background:var(--verde);color:#fff}
+.alt.errada{border-color:var(--verm);background:var(--vfundo)}.alt.errada .l{background:var(--verm);color:#fff}
+.com{grid-column:2;display:none;font-size:.9em;border-top:1px dashed #c9cfda;margin-top:6px;padding-top:6px}
+.com.on{display:block;animation:entra .4s ease}
+@keyframes entra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.dica{display:none;margin-top:14px;border-left:6px solid var(--ouro);background:#fff8e6;border-radius:0 12px 12px 0;padding:10px 16px}
+.dica.on{display:block;animation:entra .4s ease}
+.dica b:first-child{color:var(--ouro)}
+.passo{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.passo .bt{background:var(--azul);border-color:var(--azul)}.passo .bt.sec{background:#fff;color:var(--tinta);border-color:var(--borda)}
+.passo span{color:var(--suave);font-size:.75em}
+.capa h2{margin:.1em 0 .3em;font-size:1.6em;line-height:1.2}
+.lista{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px;margin-top:14px}
+.lista button{display:flex;gap:10px;align-items:flex-start;text-align:left;border:1px solid var(--borda);background:#fff;border-radius:12px;padding:10px 12px;cursor:pointer;font:inherit;font-size:.82em;color:inherit}
+.lista button:hover{border-color:var(--azul)}
+.lista .n{font-weight:900;min-width:2em}
+.atalhos{font-size:.72em;color:var(--suave);margin-top:14px}
+kbd{background:#eef0f4;border:1px solid #cfd5df;border-radius:5px;padding:0 6px;font-family:inherit;font-weight:700}
+@media(max-width:700px){.cartao{padding:16px}.alt{grid-template-columns:38px 1fr}#pontos button{width:26px;height:26px}}
+@media print{header,.passo{display:none}.com,.dica{display:block!important}}
+</style></head><body>
+<header>
+  <h1><small>Aula em questões · Prof. Pietro Medeiros</small>Lei Maria da Penha e Crimes contra a Administração Pública</h1>
+  <nav id="pontos" aria-label="Questões"></nav>
+  <span id="placar">Turma: 0 ✓ · 0 ✗</span>
+  <div class="ferr"><button id="bCapa" title="Lista de questões (Home)">☰</button><button id="bMenos" title="Letra menor (−)">A−</button><button id="bMais" title="Letra maior (+)">A+</button><button id="bTela" title="Tela cheia (F)">⛶</button></div>
+</header>
+<main id="palco"></main>
+<script id="dados" type="application/json">{"titulo": "Aula em Questões · Lei Maria da Penha e Crimes contra a Administração Pública", "subtitulo": "16 questões objetivas no estilo FGV, com todas as alternativas comentadas", "base": "Cadernos do Prof. Pietro Medeiros: Lei Maria da Penha (atualizado até setembro de 2026) e Crimes contra a Administração Pública (STF e STJ até 2025). Leis de 2025 e 2026 conforme o material de aula; confira a redação oficial no Planalto.", "assuntos": {"LMP": "Lei Maria da Penha", "ADM": "Crimes contra a Administração Pública"}, "questoes": [{"assunto": "LMP", "tema": "Âmbito de aplicação · art. 5º · Súmula 600/STJ", "enunciado": "Paula e Rodrigo **namoraram por dois anos**, cada um morando na casa dos próprios pais, e **nunca coabitaram**. Seis meses após o término, Rodrigo, inconformado, aborda Paula na saída da faculdade e a agride com socos, em **via pública**. A defesa sustenta que a Lei nº 11.340/2006 não incide no caso.", "comando": "Diante do exposto, assinale a afirmativa correta.", "alts": {"A": "A lei não incide, pois a ausência de coabitação afasta a relação íntima de afeto prevista no art. 5º.", "B": "A lei não incide, pois o relacionamento já havia terminado quando a agressão ocorreu.", "C": "A lei incide, pois o art. 5º, III, alcança a relação íntima de afeto em que o agressor conviva ou tenha convivido com a ofendida, independentemente de coabitação.", "D": "A lei incide apenas se a agressão tiver ocorrido no interior de uma residência, por se tratar de violência doméstica.", "E": "A lei incide somente se a vítima comprovar que a agressão foi motivada exclusivamente pela condição de mulher, ônus que lhe cabe."}, "gab": "C", "coment": {"A": "**Errada.** A **Súmula 600 do STJ** é expressa: para configurar a violência doméstica do art. 5º **não se exige coabitação** entre autor e vítima.", "B": "**Errada.** O art. 5º, III, fala em agressor que **conviva ou tenha convivido** com a ofendida: a relação **passada** está protegida.", "C": "**Correta.** Namoro é **relação íntima de afeto**; o inciso III dispensa a coabitação e abrange a relação já encerrada (Súm. 600/STJ).", "D": "**Errada.** O **local não importa**; importa o contexto da relação. A violência “doméstica” da lei não exige que o fato ocorra dentro de casa.", "E": "**Errada.** Desde a Lei 14.550/2023, o **art. 40-A** manda aplicar a lei a todas as situações do art. 5º **independentemente da causa ou da motivação** alegada; não há esse ônus para a vítima."}, "dica": "Três “nãos” do âmbito: **não precisa morar junto**, **não precisa estar no relacionamento** e **não precisa ser dentro de casa**."}, {"assunto": "LMP", "tema": "Art. 40-A · sujeitos · mulher trans · STF, Tema 1.412", "enunciado": "Em aula sobre o alcance da Lei Maria da Penha, o professor apresentou as seguintes afirmativas:\n\nI. A agressão do irmão contra a irmã, em discussão sobre a venda da casa herdada dos pais, afasta a lei se a defesa demonstrar que a motivação foi **exclusivamente patrimonial**.\nII. A lei protege a **mulher transexual** vítima de violência no âmbito familiar, pois o critério legal é o **gênero**, e não o sexo biológico.\nIII. Na relação **homoafetiva entre duas mulheres**, a lei pode incidir, sendo **mulher** a agressora.\nIV. Segundo o STF (Tema 1.412), as **medidas protetivas** podem alcançar a violência baseada no gênero praticada por **vizinho sem vínculo afetivo** com a vítima.", "comando": "Está correto o que se afirma em", "alts": {"A": "I e II, apenas.", "B": "II e III, apenas.", "C": "II, III e IV, apenas.", "D": "I, III e IV, apenas.", "E": "I, II, III e IV."}, "gab": "C", "coment": {"A": "**Errada.** Inclui a afirmativa I, que é falsa: pelo **art. 40-A**, presente o contexto do art. 5º (aqui, o âmbito familiar), a lei se aplica qualquer que seja a causa alegada.", "B": "**Errada.** Está incompleta: deixa de fora a afirmativa IV, que é verdadeira (STF, ARE 1.537.713, Tema 1.412).", "C": "**Correta.** II: STJ, REsp 1.977.124/SP (o critério é o gênero). III: o art. 5º, parágrafo único, diz que as relações **independem de orientação sexual**, e o sujeito ativo pode ser mulher. IV: Tema 1.412 do STF, para as **medidas protetivas**.", "D": "**Errada.** Inclui a afirmativa I (falsa) e exclui a II (verdadeira).", "E": "**Errada.** A afirmativa I é falsa: a “briga patrimonial” não afasta a lei no âmbito familiar (art. 40-A)."}, "dica": "**Sujeito passivo: mulher** (incluída a mulher trans). **Sujeito ativo: qualquer pessoa.** Cuidado: o Tema 1.412 vale para as **medidas protetivas**; para os demais institutos, continua-se analisando o art. 5º."}, {"assunto": "LMP", "tema": "Formas de violência · art. 7º", "enunciado": "Ana relata na delegacia que o companheiro **esconde seus documentos pessoais e o cartão do salário**, **joga fora seu anticoncepcional** para que ela engravide contra a vontade e a **proíbe de visitar a mãe**, verificando diariamente seu celular. Desde a separação, ele também **maltrata o filho comum** durante as visitas e envia vídeos a Ana dizendo “isso é culpa sua”.", "comando": "À luz do art. 7º da Lei nº 11.340/2006, assinale a afirmativa correta.", "alts": {"A": "O rol do art. 7º é taxativo, de modo que condutas não descritas literalmente nos incisos não autorizam medida protetiva.", "B": "Reter os documentos e o cartão do salário configura violência moral, pois atinge a honra da mulher.", "C": "Impedir o uso de método contraceptivo é violência psicológica, já que não há relação sexual forçada.", "D": "Há violência patrimonial, sexual e psicológica, além de violência vicária, que atinge o filho com o fim de atingir a mulher.", "E": "Os maus-tratos ao filho escapam da Lei Maria da Penha, pois a vítima direta é a criança, protegida apenas pelo ECA."}, "gab": "D", "coment": {"A": "**Errada.** O caput do art. 7º diz “**entre outras**”: o rol é **exemplificativo**.", "B": "**Errada.** Reter documentos, bens e recursos é **violência patrimonial** (art. 7º, IV). Violência moral é calúnia, difamação ou injúria (inciso V).", "C": "**Errada.** O inciso III define como **violência sexual** a conduta que **impeça o uso de método contraceptivo**, ainda que não haja estupro.", "D": "**Correta.** Patrimonial (documentos e salário), **sexual** (anticoncepcional), psicológica (isolamento e vigilância) e **vicária** (art. 7º, VI, Lei 15.384/2026): violência contra o filho **com vistas a atingir** a mulher.", "E": "**Errada.** A violência vicária foi incluída como **6ª forma** de violência justamente para esses casos; cabe medida protetiva, inclusive a suspensão das visitas."}, "dica": "Patrimonial = **reter, subtrair, destruir**. Sexual inclui **direitos reprodutivos**. Vicária = ferir quem ela ama **para atingi-la**; matar com esse fim é **vicaricídio** (art. 121-B, hediondo)."}, {"assunto": "LMP", "tema": "Medidas protetivas · natureza e procedimento", "enunciado": "Maria procura a Defensoria Pública dizendo que **não quer processar** o ex-companheiro e **não registrou boletim de ocorrência**, mas tem medo, pois ele ronda sua casa. Ela saiu do imóvel com os dois filhos, foi para outra cidade e está sem renda.", "comando": "Sobre as medidas protetivas de urgência, assinale a afirmativa correta.", "alts": {"A": "Como não há boletim de ocorrência nem inquérito, o pedido de medida protetiva deve ser indeferido por falta de procedimento principal.", "B": "O juiz deve decidir em 48 horas e pode conceder a medida de imediato, sem ouvir o agressor nem o Ministério Público, que será prontamente comunicado.", "C": "Concedida a medida, ela perde a eficácia em 90 dias se não for ajuizada a ação penal, conforme o STJ.", "D": "O juiz pode conceder auxílio-aluguel a Maria pelo prazo de até 12 meses, renovável enquanto durar o risco.", "E": "A matrícula dos filhos na escola mais próxima do novo domicílio depende da existência de vaga na rede pública."}, "gab": "B", "coment": {"A": "**Errada.** Pela Lei 14.550/2023, a medida independe de **tipificação penal, ação penal, inquérito ou boletim de ocorrência**.", "B": "**Correta.** Art. 18 (**48 horas**) e art. 19, § 1º: concessão **de imediato**, **independentemente de audiência das partes** e de manifestação do MP.", "C": "**Errada.** STJ, **Tema 1.249**: a medida é **tutela inibitória**, sem prazo predeterminado; vigora **enquanto persistir o risco**.", "D": "**Errada.** O auxílio-aluguel do art. 23, VI, é por período **não superior a 6 meses**.", "E": "**Errada.** O art. 23, V, garante a matrícula ou transferência **independentemente da existência de vaga**."}, "dica": "Medida protetiva **protege, não pune**: sem B.O., sem processo, **48 h** para decidir, **dura enquanto houver risco**. Auxílio-aluguel: **até 6 meses**."}, {"assunto": "LMP", "tema": "Afastamento imediato (art. 12-C) e monitoração eletrônica", "enunciado": "Num sábado à noite, em município de 8 mil habitantes que **não é sede de comarca**, a Polícia Militar atende mulher ameaçada com faca pelo companheiro. **Não há delegado disponível** naquele momento. Semanas antes, o mesmo homem já havia **descumprido** medida protetiva de proibição de contato.", "comando": "Assinale a afirmativa correta.", "alts": {"A": "Somente o juiz pode afastar o agressor do lar; ao policial cabe apenas lavrar a ocorrência e aguardar a decisão judicial.", "B": "O policial pode afastar imediatamente o agressor do lar, comunicando o juiz em até 24 horas, que decidirá em igual prazo sobre a manutenção da medida, com ciência ao Ministério Público.", "C": "O delegado só poderia afastar o agressor se o município fosse sede de comarca, situação em que o juiz é comunicado em 48 horas.", "D": "O afastamento imediato pressupõe risco à vida ou à integridade física, não abrangendo o risco à integridade sexual, moral ou patrimonial.", "E": "Havendo descumprimento anterior, a monitoração eletrônica é vedada, pois o agressor deve ser necessariamente preso preventivamente."}, "gab": "B", "coment": {"A": "**Errada.** O art. 12-C escalona: **juiz** (regra); **delegado**, se o município não for sede de comarca; **policial**, se também não houver delegado disponível.", "B": "**Correta.** Art. 12-C, III, e § 1º: comunicação ao juiz em **24 horas**, que decide em **igual prazo**, dando ciência ao MP.", "C": "**Errada.** É o inverso: o delegado atua justamente quando o município **não** é sede de comarca; e o prazo de comunicação é de **24 horas**.", "D": "**Errada.** A Lei 15.411/2026 ampliou o art. 12-C para o risco à integridade **sexual, moral ou patrimonial**.", "E": "**Errada.** Descumprimento anterior torna a monitoração **prioritária** (art. 22, § 6º, Lei 15.383/2026); se não a aplicar, o juiz deve **fundamentar**."}, "dica": "Afastamento: **juiz → delegado (sem comarca) → policial (sem comarca e sem delegado)**, comunicação em **24 h**. Tornozeleira: **prioridade** se já houve descumprimento."}, {"assunto": "LMP", "tema": "Descumprimento de medida protetiva · art. 24-A", "enunciado": "A **Vara de Família** deferiu medida protetiva proibindo Rafael de manter contato com Clara por qualquer meio. Devidamente intimado, Rafael pede à **irmã** que diga a Clara que “ele vai ficar louco se ela não voltar”. Clara comunica o fato e Rafael é **preso em flagrante**. Na delegacia, o advogado pede o arbitramento de fiança.", "comando": "Assinale a afirmativa correta.", "alts": {"A": "O fato é atípico, pois a medida foi deferida por juízo cível, e o art. 24-A só alcança decisões do juízo criminal.", "B": "O fato é atípico, pois Rafael não fez contato direto com Clara, mas por meio de terceira pessoa.", "C": "Rafael responde por desobediência (art. 330 do CP), única figura cabível para o descumprimento de ordem judicial.", "D": "Há o crime do art. 24-A, punido com reclusão de 2 a 5 anos e multa, e apenas a autoridade judicial pode conceder fiança.", "E": "Há o crime do art. 24-A, e o delegado pode arbitrar fiança, pois a pena máxima não ultrapassa quatro anos."}, "gab": "D", "coment": {"A": "**Errada.** Art. 24-A, § 1º: o crime **independe da competência civil ou criminal** do juiz que deferiu a medida.", "B": "**Errada.** O contato **por interposta pessoa** também descumpre a proibição de contato “por qualquer meio”.", "C": "**Errada.** Desde a Lei 13.641/2018 há crime **específico** (art. 24-A); o STJ já entendia que não era desobediência.", "D": "**Correta.** Pena de **reclusão de 2 a 5 anos** e multa (Lei 14.994/2024) e, no flagrante, **só o juiz** concede fiança (§ 2º).", "E": "**Errada.** O § 2º veda a fiança pelo delegado; além disso, a pena máxima é de **5 anos**."}, "dica": "Art. 24-A: **2 a 5 anos**, **fiança só pelo juiz**, vale para medida **cível ou criminal**. Violar área de exclusão ou tornozeleira: **+1/3 até a metade** (§ 4º)."}, {"assunto": "LMP", "tema": "Ação penal · art. 16 · prazo de 12 meses", "enunciado": "Joana sofreu **lesão corporal** e **ameaça** praticadas pelo companheiro, por razões da condição do sexo feminino. Dias depois, volta à delegacia dizendo que “quer **retirar a queixa**”, porque ele prometeu mudar. Paralelamente, ela é **perseguida** pelo ex-namorado (art. 147-A do CP) há **oito meses** e só agora decide representar.", "comando": "Assinale a afirmativa correta.", "alts": {"A": "Joana pode se retratar da representação quanto à lesão e à ameaça, em audiência designada pelo juiz antes do recebimento da denúncia.", "B": "A ameaça contra a mulher por razões da condição do sexo feminino continua dependendo de representação, ainda que a lesão seja incondicionada.", "C": "A representação pela perseguição é intempestiva, pois o prazo decadencial é de seis meses contados do conhecimento da autoria.", "D": "A audiência do art. 16 deve ser designada de ofício em todo processo de violência doméstica, para confirmar a vontade da vítima.", "E": "Lesão e ameaça são de ação pública incondicionada; a representação pela perseguição é tempestiva, pois o prazo passou a ser de 12 meses."}, "gab": "E", "coment": {"A": "**Errada.** Lesão corporal doméstica é **incondicionada** (Súm. 542/STJ) e, desde a Lei 14.994/2024, a ameaça por razões de gênero também: **não há representação a retratar**.", "B": "**Errada.** A Lei 14.994/2024 tornou essa ameaça de **ação pública incondicionada**, com **pena em dobro**.", "C": "**Errada.** A Lei 15.438/2026 ampliou o prazo para **12 meses** nos crimes de violência doméstica de ação condicionada ou privada.", "D": "**Errada.** Pela Lei 15.380/2026, a audiência **só é designada se houver manifestação expressa da vítima**, antes do recebimento da denúncia.", "E": "**Correta.** Lesão e ameaça de gênero: **incondicionadas**. Perseguição: **condicionada**, mas a representação aos 8 meses está dentro dos **12 meses**."}, "dica": "Incondicionadas: **lesão** e **ameaça de gênero**. Condicionada: **perseguição**. Prazo para representar ou oferecer queixa: **12 meses**. Audiência do art. 16: **só a pedido dela**."}, {"assunto": "LMP", "tema": "Súmulas do STJ, vedações e prisão preventiva", "enunciado": "Pedro deu um **tapa** na companheira, sem deixar lesão (vias de fato). Na audiência, a defesa pede: (1) **transação penal**; (2) aplicação do **princípio da insignificância**; (3) em caso de condenação, pena de **cesta básica** ou **substituição** da pena privativa de liberdade por restritiva de direitos. O Ministério Público, por sua vez, sustenta que o juiz poderia ter decretado a **prisão preventiva de ofício**, com base no art. 20 da Lei nº 11.340/2006.", "comando": "Assinale a afirmativa correta.", "alts": {"A": "Nenhum dos pedidos da defesa procede, e a preventiva exige requerimento do MP, do querelante ou do assistente, ou representação do delegado, segundo o entendimento que prevalece após o Pacote Anticrime.", "B": "Aplica-se a insignificância, pois o tapa não deixou lesão e o dano à integridade física foi ínfimo.", "C": "Cabe transação penal, pois as vias de fato são contravenção de menor potencial ofensivo, sujeita à Lei nº 9.099/1995.", "D": "É possível substituir a pena por restritiva de direitos, pois as súmulas do STJ vedam apenas a pena de cesta básica.", "E": "O juiz pode decretar a preventiva de ofício, pois o art. 20 da Lei Maria da Penha prevalece sobre o CPP por especialidade."}, "gab": "A", "coment": {"A": "**Correta.** Súm. 536, 589 e **588** (sem substituição havendo violência) e art. **17** (sem cesta básica). Quanto à preventiva, prevalece no STF e no STJ a **vedação da decretação de ofício** (CPP, arts. 282, § 2º, e 311).", "B": "**Errada.** **Súmula 589/STJ**: é inaplicável a insignificância nos crimes e **contravenções** contra a mulher no âmbito doméstico.", "C": "**Errada.** Art. 41 (não se aplica a Lei 9.099) e **Súmula 536/STJ**: não cabem transação penal nem suspensão condicional do processo.", "D": "**Errada.** A **Súmula 588/STJ** impede a substituição por restritiva de direitos quando há violência ou grave ameaça.", "E": "**Errada.** Apesar da redação do art. 20, o entendimento dominante após a Lei 13.964/2019 veda a preventiva de ofício."}, "dica": "Portas fechadas: **sem Lei 9.099** (art. 41; Súm. 536), **sem insignificância** (Súm. 589), **sem restritiva com violência** (Súm. 588), **sem cesta básica** (art. 17). Preventiva: **não de ofício**."}, {"assunto": "ADM", "tema": "Funcionário público para fins penais · art. 327 · Súmula 599", "enunciado": "Sobre o conceito de funcionário público para fins penais e a teoria geral dos crimes contra a Administração Pública, analise as afirmativas:\n\nI. O **estagiário** de órgão público e o **advogado dativo** são funcionários públicos para fins penais, ainda que não remunerados pelos cofres públicos.\nII. O **depositário judicial** de bens particulares penhorados é funcionário público por equiparação e responde por peculato se deles se apropriar.\nIII. A causa de aumento de um terço do art. 327, § 2º, alcança o dirigente de **autarquia**, por integrar a administração indireta.\nIV. O princípio da insignificância é, em regra, inaplicável aos crimes contra a Administração Pública, **ressalvado o descaminho**, até o limite de R$ 20.000,00 de tributo iludido, sem reiteração.", "comando": "Está correto o que se afirma em", "alts": {"A": "I e IV, apenas.", "B": "I e II, apenas.", "C": "II e III, apenas.", "D": "I, III e IV, apenas.", "E": "I, II, III e IV."}, "gab": "A", "coment": {"A": "**Correta.** I: art. 327, caput, “**embora transitoriamente ou sem remuneração**” (STJ: estagiário e dativo). IV: **Súmula 599/STJ** e a exceção do **descaminho** (REsp 1.709.029/MG, repetitivo; Tema 1.218 sobre reiteração).", "B": "**Errada.** A afirmativa II é falsa: o depositário judicial recebe um **múnus** do juízo e **não** é funcionário público (STJ, HC 402.949/SP).", "C": "**Errada.** II e III são falsas. O § 2º não menciona **autarquia**, e a analogia *in malam partem* é vedada (STF, AO 2.093/RN).", "D": "**Errada.** Inclui a afirmativa III, que é falsa.", "E": "**Errada.** II e III são falsas."}, "dica": "O critério é a **função exercida**, não o vínculo. § 2º: **direta, SEM, empresa pública e fundação**, **sem autarquia**. Súm. 599 tem exceções: **descaminho** e **cigarros até 1.000 maços**."}, {"assunto": "ADM", "tema": "Peculato e emprego irregular de verbas · arts. 312 e 315", "enunciado": "Carla, servidora do **setor de RH** de uma secretaria municipal, usa seu crachá para entrar à noite no **depósito da merenda escolar**, que **não está sob sua guarda**, e leva caixas de leite em pó para revender. No mesmo órgão, o tesoureiro **deixa o cofre aberto** ao sair para almoçar, e um visitante subtrai o dinheiro. Já o secretário, sem qualquer proveito pessoal, aplica verba vinculada por lei à reforma de uma UBS na **recuperação de uma ponte**.", "comando": "Assinale a afirmativa correta.", "alts": {"A": "Carla comete peculato-apropriação, pois se apropriou de bem público em razão do cargo.", "B": "Carla comete peculato-furto; o tesoureiro, peculato culposo, cuja punibilidade se extingue se reparar o dano antes da sentença irrecorrível; o secretário, emprego irregular de verbas públicas.", "C": "O tesoureiro e o visitante são coautores de peculato culposo, pois o descuido de um permitiu a subtração pelo outro.", "D": "Se o tesoureiro reparar o dano após o trânsito em julgado, extingue-se a sua punibilidade.", "E": "O secretário comete peculato-desvio, pois deu às verbas destinação diversa da prevista em lei."}, "gab": "B", "coment": {"A": "**Errada.** Carla **não tinha a posse** dos bens; valeu-se da **facilidade** do cargo para subtraí-los: é **peculato-furto** (art. 312, § 1º).", "B": "**Correta.** Peculato-furto (sem posse, com facilidade); **peculato culposo** com reparação **antes** da sentença irrecorrível extinguindo a punibilidade (§ 3º); e **art. 315**, porque o desvio favoreceu a **própria Administração** (STF, Inq 3.731/DF).", "C": "**Errada.** Não há concurso de pessoas entre crime culposo e doloso: o visitante responde por **furto**; o tesoureiro, por **peculato culposo**.", "D": "**Errada.** Após a sentença irrecorrível, a reparação apenas **reduz a pena pela metade**.", "E": "**Errada.** No peculato-desvio há proveito **próprio ou alheio**. Desvio em favor da própria Administração, sem proveito pessoal, é **emprego irregular de verbas** (art. 315)."}, "dica": "**Tem posse** → apropriação ou desvio. **Não tem posse, usa a facilidade** → furto. **Descuidou** → culposo (repara antes da sentença irrecorrível: extingue). **Desvio para a própria Administração** → art. 315."}, {"assunto": "ADM", "tema": "Concussão, excesso de exação e corrupção passiva", "enunciado": "Fiscal da vigilância sanitária, em vistoria numa lanchonete, diz ao dono: “Encontrei irregularidades. **Ou você me dá R$ 1.500 até sexta**, ou interdito o estabelecimento”. O comerciante procura a polícia, e o fiscal é surpreendido ao **receber o envelope na sexta-feira**. Em outra situação, um agente fiscal recebe o ISS **devido** pago por uma feirante e **embolsa o valor**.", "comando": "Assinale a afirmativa correta.", "alts": {"A": "O fiscal sanitário pratica corrupção passiva, pois solicitou vantagem indevida, e o crime se consumou com o recebimento do envelope.", "B": "O fiscal sanitário pratica extorsão, pois houve ameaça de interdição, e o comerciante, corrupção ativa, por ter entregado o dinheiro.", "C": "O fiscal sanitário pratica concussão, consumada no momento da exigência; a entrega na sexta-feira é mero exaurimento, que, por si só, não autoriza a prisão em flagrante.", "D": "O agente fiscal que embolsa o ISS devido pratica excesso de exação qualificado (art. 316, § 2º).", "E": "A concussão tem pena menor que a da corrupção passiva, pois a Lei nº 13.964/2019 só alterou a pena desta última."}, "gab": "C", "coment": {"A": "**Errada.** Houve **exigência** com intimidação (“ou paga, ou interdito”), não mera solicitação: é **concussão**.", "B": "**Errada.** Extorsão exige **violência ou grave ameaça**; aqui, o temor decorre do **poder do cargo**. O comerciante é **vítima**, não comete corrupção ativa.", "C": "**Correta.** Concussão é **formal**: consuma-se com a exigência; a entrega é **exaurimento** (STJ, HC 266.460/ES, Info 564).", "D": "**Errada.** O § 2º pressupõe tributo **indevido** desviado. Apropriar-se de tributo **devido** é **peculato**.", "E": "**Errada.** O Pacote Anticrime elevou a pena da **concussão** para **2 a 12 anos**, igualando-a à da corrupção passiva."}, "dica": "**Exigir** = concussão. **Solicitar** = corrupção passiva. **Violência ou grave ameaça** = extorsão. Tributo **devido** embolsado = peculato; **indevido** desviado = 316, § 2º."}, {"assunto": "ADM", "tema": "Corrupção ativa, corrupção privilegiada e prevaricação", "enunciado": "Considere as situações: (1) flagrado com um cigarro de maconha, Lucas **oferece R$ 200** ao policial para “esquecer o caso”, mas o policial **recusa** e o conduz à delegacia; (2) o agente de trânsito **pede R$ 300** a um motorista sem CNH, que **paga**; (3) a pedido de um **vereador amigo**, sem receber vantagem, um servidor passa o processo do eleitor dele à frente da fila; (4) correição encontra centenas de boletins parados numa delegacia, por **desorganização e comodismo** do delegado.", "comando": "Assinale a afirmativa correta.", "alts": {"A": "Em (1), não há crime, pois o policial recusou a oferta e o crime antecedente sequer admite prisão.", "B": "Em (2), o motorista comete corrupção ativa na modalidade “dar”, por ter entregado o dinheiro.", "C": "Em (3), o servidor comete prevaricação, pois agiu para satisfazer interesse pessoal.", "D": "Em (1), há corrupção ativa consumada; em (3), corrupção passiva privilegiada; e, em (4), a desídia, por si só, não configura prevaricação.", "E": "Em (4), o delegado comete prevaricação, pois o dolo de omitir o ato de ofício basta para a tipicidade."}, "gab": "D", "coment": {"A": "**Errada.** Corrupção ativa é **formal**: consuma-se quando o funcionário toma ciência da oferta, ainda que a recuse (STJ, AREsp 2.007.599/RJ, Info 735).", "B": "**Errada.** O art. 333 só tem os núcleos **oferecer** e **prometer**; quando a iniciativa é do funcionário, quem paga **não** comete corrupção ativa.", "C": "**Errada.** Ceder a **pedido ou influência de outrem** é **corrupção passiva privilegiada** (art. 317, § 2º); a prevaricação exige interesse ou sentimento **pessoal**.", "D": "**Correta.** (1) ativa consumada com a oferta; (3) art. 317, § 2º; (4) STJ, Info 846 (2025): desídia e comodismo não revelam, de forma objetiva e concreta, o **fim especial** da prevaricação.", "E": "**Errada.** A prevaricação exige o **dolo específico** de satisfazer interesse ou sentimento pessoal (STJ, AgRg no AREsp 2.693.820/SP)."}, "dica": "Ativa: **oferecer/prometer**, sem “dar”. Pedido de **outrem** = 317, § 2º. Sentimento **pessoal** = 319. **Preguiça não é prevaricação.**"}, {"assunto": "ADM", "tema": "Resistência, desobediência, desacato, tráfico de influência e exploração de prestígio", "enunciado": "Durante policiamento ostensivo noturno, um motociclista **ignora a ordem de parada** da viatura e foge. Detido, **deita-se no chão** e se agarra a uma grade para não ser algemado, sem agredir ninguém. Na delegacia, **xinga três policiais** de uma só vez. Dias depois, um vizinho do preso pede a ele cinco salários mínimos **a pretexto de influir no depoimento de uma testemunha**, insinuando que parte iria para ela.", "comando": "Assinale a afirmativa correta.", "alts": {"A": "A fuga à ordem de parada é atípica, pois a recusa em parar só gera infração administrativa de trânsito.", "B": "Ao se agarrar à grade para evitar as algemas, o preso cometeu resistência.", "C": "Os xingamentos aos três policiais configuram três desacatos, em concurso formal.", "D": "O vizinho comete tráfico de influência, com aumento da metade por insinuar que a vantagem também se destina à testemunha.", "E": "A fuga configura desobediência, segundo o STJ (Tema 1.060); a resistência passiva é atípica; há desacato único; e o vizinho comete exploração de prestígio, com aumento de um terço."}, "gab": "E", "coment": {"A": "**Errada.** STJ, **Tema 1.060**: desobedecer à ordem de parada em **policiamento ostensivo** configura o art. 330. Atípica seria a fuga de mera fiscalização de **trânsito**.", "B": "**Errada.** Resistência exige **violência ou ameaça** contra o executor; a **resistência passiva** é atípica.", "C": "**Errada.** O bem jurídico é o **prestígio da função**, atingido uma única vez: **crime único** (STJ, AgRg no RHC 136.918/SP).", "D": "**Errada.** Influência sobre **testemunha**, juiz, jurado, MP, perito, tradutor ou intérprete é **exploração de prestígio** (art. 357), com aumento de **1/3**.", "E": "**Correta.** Tema 1.060; resistência passiva atípica; desacato único; art. 357, parágrafo único."}, "dica": "Ordem de parada: **ostensivo = crime**; **trânsito = infração administrativa**. Resistência exige **violência ou ameaça**. Funcionário em geral = **332 (+ metade)**; juiz, testemunha e afins = **357 (+ 1/3)**."}, {"assunto": "ADM", "tema": "Descaminho, contrabando e sonegação previdenciária", "enunciado": "Um “sacoleiro” volta do Paraguai com **30 celulares** escondidos em fundo falso, sem declarar à Receita, iludindo R$ 9.000,00 em tributos; é a **primeira** vez que responde por fato do gênero. Uma tabacaria do bairro expõe à venda **400 maços** de cigarros paraguaios sem registro na Anvisa e **15 cigarros eletrônicos**. Uma empresária mantém 25 empregados “por fora”, **omitindo-os da GFIP**.", "comando": "Assinale a afirmativa correta.", "alts": {"A": "O sacoleiro comete contrabando, pois os celulares entraram clandestinamente no país.", "B": "Cabe a insignificância para o sacoleiro e para os 400 maços, mas não para os cigarros eletrônicos; a empresária pratica sonegação de contribuição previdenciária (art. 337-A).", "C": "Se o sacoleiro pagar integralmente o tributo antes do recebimento da denúncia, extingue-se a punibilidade, como nos crimes materiais contra a ordem tributária.", "D": "A insignificância alcança também os cigarros eletrônicos, pois a quantidade apreendida não ultrapassa 1.000 unidades.", "E": "A empresária pratica apropriação indébita previdenciária, admitindo-se a continuidade delitiva com a sonegação previdenciária."}, "gab": "B", "coment": {"A": "**Errada.** Celular é mercadoria **permitida**; iludir o tributo é **descaminho** (art. 334). Contrabando envolve mercadoria **proibida**.", "B": "**Correta.** Descaminho até **R$ 20 mil**, sem reiteração (REsp 1.709.029/MG; Tema 1.218); cigarros até **1.000 maços** (Tema 1.143); **vape sem insignificância** (STJ, Info 853); omitir segurados da GFIP é o **art. 337-A, I**.", "C": "**Errada.** Para o STJ, o pagamento **não** extingue a punibilidade do descaminho, crime **formal** que tutela também o controle aduaneiro.", "D": "**Errada.** O parâmetro de 1.000 maços **não se estende** aos cigarros eletrônicos (STJ, AgRg no REsp 2.184.785/PR).", "E": "**Errada.** Omitir segurados é **fraude na informação** (337-A), não falta de repasse do descontado (168-A); e o STJ **não admite continuidade** entre as duas figuras."}, "dica": "**Permitida** + tributo iludido = descaminho (1 a 4 anos). **Proibida** = contrabando (2 a 5 anos). Não repassar = **168-A**; fraudar a informação = **337-A**."}, {"assunto": "ADM", "tema": "Crimes em licitações e contratos · arts. 337-E a 337-P", "enunciado": "Em município do interior: (1) empresas combinam previamente quem vencerá cada pregão, apresentando “propostas de cobertura”, sem que se apure prejuízo ao erário; (2) o secretário deixa vencer o contrato de limpeza dos hospitais e contrata **diretamente**, por “emergência”, a empresa do sobrinho do prefeito; (3) a contratada para fornecer merenda em pacotes de 10 kg entrega pacotes de 9 kg, **faturando 10 kg**; (4) a sentença fixa a pena de multa.", "comando": "Assinale a afirmativa correta.", "alts": {"A": "Em (1), há frustração do caráter competitivo da licitação, crime formal (Súmula 645/STJ); em (2), contratação direta ilegal (art. 337-E); em (3), fraude em licitação ou contrato (art. 337-L).", "B": "Em (4), a multa não pode superar 2% do valor do contrato licitado.", "C": "Em (1), não há crime, pois a fraude à licitação exige a comprovação de prejuízo ao erário.", "D": "Em (2), o fato é atípico, pois a emergência autoriza a contratação direta, ainda que decorrente da má gestão do administrador.", "E": "Em (3), há apenas inadimplemento contratual, sem relevância penal, ainda que a nota fiscal registre quantidade maior que a entregue."}, "gab": "A", "coment": {"A": "**Correta.** Cartel com propostas de cobertura frustra a competição (337-F); a contratação direta fora das hipóteses legais é o 337-E; entregar quantidade diversa da contratada, com prejuízo, é o 337-L, I.", "B": "**Errada.** Art. 337-P: os 2% são **piso** (“não poderá ser **inferior**”), e não teto.", "C": "**Errada.** **Súmula 645/STJ**: a fraude à licitação (hoje art. 337-F) é **formal** e dispensa prejuízo ou vantagem efetiva.", "D": "**Errada.** A doutrina majoritária entende que a **emergência fabricada** por desídia ou má gestão não legitima a dispensa.", "E": "**Errada.** Entregar quantidade menor faturando a maior é **fraude** em prejuízo da Administração (337-L, I). Sem a fraude na nota, poderia ser mero inadimplemento."}, "dica": "Os “4 a 8 anos”: **E–F–H–L**. **337-F é formal** (Súm. 645); **337-L exige prejuízo**. Multa: **piso de 2%** do contrato."}, {"assunto": "ADM", "tema": "Crimes contra a Administração da Justiça · arts. 338-A a 352", "enunciado": "Analise as situações: (1) após a absolvição de um réu, o autor da notícia-crime é denunciado por **denunciação caluniosa** apenas porque a acusação não se comprovou; (2) uma testemunha mente em juízo para ajudar o amigo réu, instruída pelo advogado deste, e **se retrata antes da sentença**; (3) a **mãe** esconde o filho foragido em casa e o **irmão** dele guarda o dinheiro do roubo para entregá-lo depois; (4) um preso foge pela porta da cela, deixada aberta, **sem violência**; (5) preso em flagrante pelo descumprimento de medida protetiva deferida em favor de **idosa** (art. 338-A do CP), o autor requer fiança ao delegado.", "comando": "Assinale a afirmativa correta.", "alts": {"A": "Em (1), a absolvição do réu basta, por si só, para a condenação por denunciação caluniosa.", "B": "Em (2), a retratação extingue a punibilidade da testemunha, mas não a do advogado, que responde como coautor.", "C": "Em (3), mãe e irmão ficam isentos de pena, pois a escusa absolutória alcança tanto o favorecimento pessoal quanto o real.", "D": "Em (4), há fato atípico penalmente, embora configure falta grave; e, em (5), só a autoridade judicial pode conceder fiança.", "E": "Em (5), o delegado pode arbitrar fiança, pois a regra que a reserva ao juiz só vale para a Lei Maria da Penha."}, "gab": "D", "coment": {"A": "**Errada.** A denunciação caluniosa exige **dolo direto** (saber que o imputado é inocente); a absolvição, por si só, não prova a má-fé (STF, Inq 3.133/AC).", "B": "**Errada.** O falso testemunho é de mão própria, mas admite **participação**, e a **retratação se estende aos partícipes** (STJ, HC 36.287/SP).", "C": "**Errada.** A mãe está isenta (favorecimento **pessoal**, art. 348, § 2º), mas o irmão que garante o **proveito** do crime pratica favorecimento **real** (art. 349), **sem escusa**.", "D": "**Correta.** O art. 352 exige **violência contra a pessoa**; a fuga sem violência é **falta grave** (LEP, art. 50, II). No art. **338-A** (Lei 15.280/2025), o § 2º reserva a fiança ao **juiz**.", "E": "**Errada.** O art. 338-A, tipo geral criado em 2025 para as demais medidas protetivas, também reserva a fiança **apenas** à autoridade judicial."}, "dica": "Denunciação caluniosa: **dolo direto**. Falso testemunho: retratação **até a sentença**, vale para o **partícipe**. Escusa familiar: **só no favorecimento pessoal**. Fuga sem violência: **não é crime**."}]}</script>
+<script>
+'use strict';
+const D = JSON.parse(document.getElementById('dados').textContent), Q = D.questoes, L = ['A', 'B', 'C', 'D', 'E'];
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const neg = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\*(.+?)\*/g, '<i>$1</i>');
+const par = s => String(s).split(/\n\s*\n|\n/).map(t => `<p>${neg(t)}</p>`).join('');
+const CHAVE = 'aula-questoes:' + D.titulo;
+let st = { q: -1, marc: {}, rev: {}, passo: {}, z: 1 };
+try { st = Object.assign(st, JSON.parse(localStorage.getItem(CHAVE) || '{}')); } catch (e) { }
+const salvar = () => { try { localStorage.setItem(CHAVE, JSON.stringify(st)); } catch (e) { } };
+function zoom(v) { st.z = Math.max(.8, Math.min(1.8, Math.round(v * 10) / 10)); document.documentElement.style.setProperty('--z', st.z); salvar(); }
+
+function placar() {
+  let ok = 0, no = 0;
+  Q.forEach((q, i) => { if (st.rev[i] && st.marc[i]) { if (st.marc[i] === q.gab) ok++; else no++; } });
+  $('placar').textContent = `Turma: ${ok} ✓ · ${no} ✗`;
+  $('pontos').innerHTML = Q.map((q, i) => {
+    const r = st.rev[i] && st.marc[i] ? (st.marc[i] === q.gab ? 'ok' : 'no') : '';
+    return `<button class="${q.assunto} ${r} ${i === st.q ? 'cur' : ''}" data-ir="${i}" title="Questão ${i + 1} · ${esc(D.assuntos[q.assunto])}">${i + 1}</button>`;
+  }).join('');
+}
+function capa() {
+  st.q = -1; salvar(); placar();
+  const grupos = Object.keys(D.assuntos).map(a => `<h3 style="margin:18px 0 0"><span class="rot"><span class="ass ${a}">${esc(D.assuntos[a])}</span></span></h3>` +
+    `<div class="lista">${Q.map((q, i) => q.assunto === a ? `<button data-ir="${i}"><span class="n">${i + 1}.</span><span>${esc(q.tema)}${st.rev[i] ? ' ✔' : ''}</span></button>` : '').join('')}</div>`).join('');
+  $('palco').innerHTML = `<section class="cartao capa"><div class="rot">Aula em questões · estilo FGV</div><h2>${esc(D.titulo)}</h2><p>${esc(D.subtitulo)}. Base: ${esc(D.base)}</p>${grupos}` +
+    `<p class="atalhos"><kbd>→</kbd> avança (revela o gabarito e, depois, um comentário por vez) · <kbd>←</kbd> volta · <kbd>A</kbd>–<kbd>E</kbd> marca a resposta da turma · <kbd>R</kbd> revela tudo · <kbd>+</kbd>/<kbd>−</kbd> letra · <kbd>F</kbd> tela cheia · <kbd>G</kbd> grifos · <kbd>Home</kbd> esta lista</p>` +
+    `<div class="passo"><span></span><button class="bt" data-ir="0">Começar pela questão 1 →</button></div></section>`;
+}
+function ordemComent(q) { return [q.gab].concat(L.filter(x => x !== q.gab)); }   // primeiro a correta, depois as erradas
+function mostrar(rolar) {
+  const i = st.q, q = Q[i]; if (!q) return capa();
+  const rev = !!st.rev[i], p = st.passo[i] || 0, ord = ordemComent(q), vis = new Set(ord.slice(0, p));
+  $('palco').innerHTML = `<section class="cartao" id="qcard"><div class="rot"><span>Questão ${i + 1} de ${Q.length}</span><span class="ass ${q.assunto}">${esc(D.assuntos[q.assunto])}</span><span>${esc(q.tema)}</span></div>` +
+    `<div class="enun">${par(q.enunciado)}</div><div class="comando">${neg(q.comando)}</div>` +
+    L.map(x => { let c = 'alt'; if (rev) { if (x === q.gab) c += ' certa'; else if (st.marc[i] === x) c += ' errada'; } else if (st.marc[i] === x) c += ' marcada';
+      return `<button class="${c}" data-alt="${x}" id="alt${x}"><span class="l">${x}</span><span class="txt">${neg(q.alts[x])}</span><span class="com ${vis.has(x) ? 'on' : ''}" id="com${x}">${neg(q.coment[x])}</span></button>`; }).join('') +
+    `<div class="dica ${p > L.length ? 'on' : ''}" id="dica"><b>💡 Dica do professor:</b> ${neg(q.dica)}</div>` +
+    `<div class="passo"><button class="bt sec" id="bAnt">← Anterior</button><span>${rev ? (p <= L.length ? `Comentário ${Math.min(p, 5)} de 5` : 'Questão comentada') : (st.marc[i] ? `Turma marcou ${st.marc[i]}` : 'Marque a resposta da turma (A a E)')}</span>` +
+    `<button class="bt" id="bProx">${!rev ? 'Revelar gabarito →' : p < L.length ? 'Próximo comentário →' : p === L.length ? 'Dica do professor →' : (i < Q.length - 1 ? 'Próxima questão →' : 'Ver o placar →')}</button></div></section>`;
+  placar(); salvar();
+  if (rolar) {
+    const alvo = !rev ? $('qcard') : p === 0 ? $('alt' + q.gab) : p > L.length ? $('dica') : $('alt' + ord[p - 1]);
+    setTimeout(() => alvo && alvo.scrollIntoView({ block: alvo.offsetHeight > innerHeight * .8 ? 'start' : 'center', behavior: 'smooth' }), 40);
+  }
+}
+function ir(i) { st.q = i; mostrar(false); scrollTo(0, 0); }
+function fim() {
+  st.q = Q.length; salvar(); placar();
+  let ok = 0, no = 0, sem = 0; Q.forEach((q, i) => { if (!st.marc[i] || !st.rev[i]) sem++; else if (st.marc[i] === q.gab) ok++; else no++; });
+  const por = a => { const idx = Q.map((q, i) => i).filter(i => Q[i].assunto === a); return `${idx.filter(i => st.rev[i] && st.marc[i] === Q[i].gab).length} de ${idx.length}`; };
+  $('palco').innerHTML = `<section class="cartao capa"><div class="rot">Fim da aula</div><h2>Placar da turma: ${ok} acerto${ok === 1 ? '' : 's'} em ${Q.length}</h2>` +
+    `<p>${Object.keys(D.assuntos).map(a => `<b>${esc(D.assuntos[a])}:</b> ${por(a)}`).join(' · ')}${no ? ` · <b>Erros:</b> ${no}` : ''}${sem ? ` · <b>Sem resposta marcada:</b> ${sem}` : ''}</p>` +
+    `<div class="passo"><button class="bt sec" id="bZerar">Zerar respostas</button><button class="bt" id="bLista">Lista de questões</button></div></section>`;
+}
+function avancar() {
+  const i = st.q; if (i < 0) return ir(0); if (i >= Q.length) return;
+  if (!st.rev[i]) { st.rev[i] = 1; st.passo[i] = 0; return mostrar(true); }
+  if ((st.passo[i] || 0) <= L.length) { st.passo[i] = (st.passo[i] || 0) + 1; return mostrar(true); }
+  if (i < Q.length - 1) ir(i + 1); else fim();
+}
+function voltar() {
+  const i = st.q; if (i >= Q.length) return ir(Q.length - 1); if (i < 0) return;
+  if (st.rev[i] && (st.passo[i] || 0) > 0) { st.passo[i]--; return mostrar(true); }
+  if (st.rev[i]) { st.rev[i] = 0; return mostrar(true); }
+  if (i > 0) { st.q = i - 1; mostrar(false); scrollTo(0, 0); } else capa();
+}
+function marcar(x) { const i = st.q; if (i < 0 || i >= Q.length || st.rev[i]) return; st.marc[i] = st.marc[i] === x ? undefined : x; mostrar(false); }
+function tudo() { const i = st.q; if (i < 0 || i >= Q.length) return; st.rev[i] = 1; st.passo[i] = L.length + 1; mostrar(true); }
+function tela() { const d = document; try { if (!d.fullscreenElement) { const r = d.documentElement.requestFullscreen(); if (r && r.catch) r.catch(() => { }); } else d.exitFullscreen(); } catch (e) { } }
+
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-ir],[data-alt],#bProx,#bAnt,#bCapa,#bMais,#bMenos,#bTela,#bZerar,#bLista'); if (!t) return;
+  if (t.dataset.ir != null) return ir(+t.dataset.ir);
+  if (t.dataset.alt) return marcar(t.dataset.alt);
+  ({ bProx: avancar, bAnt: voltar, bCapa: capa, bLista: capa, bMais: () => zoom(st.z + .1), bMenos: () => zoom(st.z - .1), bTela: tela,
+    bZerar: () => { st.marc = {}; st.rev = {}; st.passo = {}; capa(); } })[t.id]();
+});
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey || e.metaKey || e.altKey || /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+  const k = e.key;
+  if (k === 'ArrowRight' || k === ' ' || k === 'PageDown' || k === 'Enter') { e.preventDefault(); avancar(); }
+  else if (k === 'ArrowLeft' || k === 'PageUp') { e.preventDefault(); voltar(); }
+  else if (/^[a-eA-E]$/.test(k)) marcar(k.toUpperCase());
+  else if (k === 'r' || k === 'R') tudo();
+  else if (k === '+' || k === '=') zoom(st.z + .1); else if (k === '-') zoom(st.z - .1);
+  else if (k === 'f' || k === 'F') tela(); else if (k === 'Home') capa();
+});
+zoom(st.z || 1);
+if (st.q >= 0 && st.q < Q.length) mostrar(false); else if (st.q >= Q.length) fim(); else capa();
+</script>
+<script>window.GRIFA_CHAVE = 'grifos:v1:aula-questoes:Lei Maria da Penha e Crimes contra a Administração Pública';</script>
+<script>
+/* Cópia de Trilha_AOCP_Delegado_Bahia_HTML/assets/grifa.js (10/11/2026), com UMA mudança: a chave dos grifos pode vir de
+   window.GRIFA_CHAVE. Pedido do titular, 11/11/2026: "implante também a função G (grife) com as opções na lateral da página". */
+/* Paleta de grifos — FONTE ÚNICA (10/11/2026, pedido do titular: "sempre que eu apertar G aparece uma paleta de
+   grifos... para eu grifar algum texto que eu queira, em todas as telas").
+   ⚠️ Não se edita a cópia embutida nas telas: edita-se ESTE arquivo e roda-se
+   "python ferramentas/embutir_grifa.py". O portão (--conferir) reprova cópia diferente desta.
+   Como funciona:
+   - G (sem Ctrl/Alt, fora de campo de texto) abre e fecha a paleta; Esc fecha.
+   - Com a paleta aberta e uma cor escolhida, selecionar um texto já o grifa (como caneta marca-texto).
+     Com texto já selecionado, clicar na cor grifa na hora.
+   - Borracha: clicar num grifo o apaga. "Limpar esta tela" pede confirmação na própria paleta.
+   - Os grifos ficam salvos neste navegador, por tela (localStorage "grifos:v1:<caminho>"), ancorados pelo TEXTO
+     (o trecho + 32 caracteres de contexto de cada lado), e voltam sozinhos quando a tela se redesenha
+     (troca de aba, próxima questão, recarregar a página). Trecho repetido sem o mesmo contexto não é grifado. */
+(function () {
+  'use strict';
+  if (window.Grifa) return;
+  var CORES = [
+    { id: 'amarelo', nome: 'Amarelo', fundo: '#fff176' },
+    { id: 'verde', nome: 'Verde', fundo: '#b9f6ca' },
+    { id: 'azul', nome: 'Azul', fundo: '#b3e5fc' },
+    { id: 'rosa', nome: 'Rosa', fundo: '#f8bbd0' },
+    { id: 'laranja', nome: 'Laranja', fundo: '#ffcc80' }
+  ];
+  var CTX = 32;
+  var CHAVE = window.GRIFA_CHAVE || ('grifos:v1:' + decodeURIComponent(location.pathname || '/'));  // portal-aulas: chave por aula (as 4 aulas dividem o mesmo endereço)
+  var PULAR = /^(SCRIPT|STYLE|NOSCRIPT|TEXTAREA|INPUT|SELECT|OPTION|TEMPLATE|svg|SVG)$/;
+  var ferramenta = 'amarelo';
+  var paleta = null, observador = null, agendado = 0, aplicando = false, confirmaLimpar = 0;
+
+  function ler() {
+    try { var d = JSON.parse(localStorage.getItem(CHAVE) || '[]'); return Array.isArray(d) ? d : []; }
+    catch (e) { return []; }
+  }
+  function gravar(lista) {
+    try { localStorage.setItem(CHAVE, JSON.stringify(lista)); return true; }
+    catch (e) { aviso('Não deu para salvar o grifo neste navegador (armazenamento cheio ou bloqueado).'); return false; }
+  }
+
+  /* ---------- índice do texto visível da página ---------- */
+  function fora(no) {
+    for (var el = no.parentNode; el && el !== document.body; el = el.parentNode) {
+      if (el.nodeType !== 1) continue;
+      if (PULAR.test(el.nodeName) || el.id === 'grf-paleta' || el.isContentEditable) return true;
+    }
+    return false;
+  }
+  function indice() {
+    var nos = [], inicios = [], partes = [], total = 0;
+    if (!document.body) return { nos: nos, inicios: inicios, texto: '' };
+    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+    for (var n = w.nextNode(); n; n = w.nextNode()) {
+      if (!n.nodeValue || fora(n)) continue;
+      nos.push(n); inicios.push(total); partes.push(n.nodeValue); total += n.nodeValue.length;
+    }
+    return { nos: nos, inicios: inicios, texto: partes.join('') };
+  }
+  function posicao(ix, recipiente, desloc, fim) {
+    if (recipiente.nodeType === 3) {
+      var i = ix.nos.indexOf(recipiente);
+      if (i >= 0) return ix.inicios[i] + desloc;
+    }
+    /* recipiente é elemento (ou texto fora do índice): procura o primeiro texto do índice depois do ponto */
+    var alvo = recipiente.nodeType === 1 ? (recipiente.childNodes[desloc] || null) : recipiente;
+    for (var k = 0; k < ix.nos.length; k++) {
+      var no = ix.nos[k];
+      if (alvo === null) {
+        if (!recipiente.contains(no) && (recipiente.compareDocumentPosition(no) & Node.DOCUMENT_POSITION_FOLLOWING)) return ix.inicios[k];
+      } else if (alvo === no || alvo.contains(no) || (alvo.compareDocumentPosition(no) & Node.DOCUMENT_POSITION_FOLLOWING)) {
+        return ix.inicios[k];
+      }
+    }
+    return fim ? ix.texto.length : -1;
+  }
+
+  /* ---------- envolver um intervalo [ini, fim) do índice em <mark> ---------- */
+  function envolver(ix, ini, fim, g) {
+    var feitos = 0;
+    for (var k = ix.nos.length - 1; k >= 0; k--) {
+      var no = ix.nos[k], a = ix.inicios[k], b = a + no.nodeValue.length;
+      if (b <= ini || a >= fim) continue;
+      var s = Math.max(ini, a) - a, e = Math.min(fim, b) - a;
+      var pedaco = no.nodeValue.slice(s, e);
+      if (!pedaco.trim()) continue; /* espaço entre células de tabela: não se envolve (quebraria a estrutura) */
+      var alvo = no;
+      if (e < alvo.nodeValue.length) alvo.splitText(e);
+      if (s > 0) alvo = alvo.splitText(s);
+      var m = document.createElement('mark');
+      m.className = 'grf grf-' + g.cor; m.setAttribute('data-grf', g.id); m.title = 'Grifo (' + g.cor + ')';
+      alvo.parentNode.insertBefore(m, alvo); m.appendChild(alvo); feitos++;
+    }
+    return feitos;
+  }
+  function achar(ix, g) {
+    var t = ix.texto, melhor = -1, nota = -1, vistos = 0;
+    for (var p = t.indexOf(g.t); p >= 0; p = t.indexOf(g.t, p + 1)) {
+      vistos++;
+      var antes = t.slice(Math.max(0, p - g.a.length), p), depois = t.slice(p + g.t.length, p + g.t.length + g.d.length);
+      var n = (antes === g.a ? 2 : 0) + (depois === g.d ? 2 : 0);
+      if (n > nota) { nota = n; melhor = p; }
+      if (vistos > 500) break;
+    }
+    if (melhor < 0) return -1;
+    if (vistos > 1 && nota < 2) return -1; /* repetido e sem o contexto: não arrisca grifar o lugar errado */
+    return melhor;
+  }
+  function presente(id) { return !!document.querySelector('mark.grf[data-grf="' + id + '"]'); }
+
+  function aplicar() {
+    agendado = 0;
+    var lista = ler(), falta = [];
+    for (var i = 0; i < lista.length; i++) if (!presente(lista[i].id)) falta.push(lista[i]);
+    if (!falta.length) return 0;
+    aplicando = true; pausar();
+    var n = 0;
+    try {
+      for (var j = 0; j < falta.length; j++) {
+        var ix = indice(), p = achar(ix, falta[j]);
+        if (p >= 0 && envolver(ix, p, p + falta[j].t.length, falta[j])) n++;
+      }
+    } finally { retomar(); aplicando = false; }
+    contar();
+    return n;
+  }
+  function agendar() { if (!agendado) agendado = setTimeout(aplicar, 250); }
+  function pausar() { if (observador) observador.disconnect(); }
+  function retomar() {
+    if (!observador && window.MutationObserver) observador = new MutationObserver(function () { if (!aplicando) agendar(); });
+    if (observador && document.body) observador.observe(document.body, { childList: true, subtree: true, characterData: true });
+  }
+
+  /* ---------- criar e apagar ---------- */
+  function grifarSelecao(cor) {
+    var sel = window.getSelection && window.getSelection();
+    if (!sel || sel.isCollapsed || !sel.rangeCount) return false;
+    var r = sel.getRangeAt(0);
+    if (paleta && paleta.contains(r.commonAncestorContainer)) return false;
+    var ix = indice();
+    var ini = posicao(ix, r.startContainer, r.startOffset, false), fim = posicao(ix, r.endContainer, r.endOffset, true);
+    if (ini < 0 || fim <= ini) return false;
+    var trecho = ix.texto.slice(ini, fim);
+    var esq = trecho.length - trecho.replace(/^\s+/, '').length, dir = trecho.length - trecho.replace(/\s+$/, '').length;
+    ini += esq; fim -= dir;
+    if (fim <= ini) return false;
+    var g = { id: 'g' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), cor: cor,
+      t: ix.texto.slice(ini, fim), a: ix.texto.slice(Math.max(0, ini - CTX), ini), d: ix.texto.slice(fim, fim + CTX),
+      em: new Date().toISOString() };
+    var lista = ler(); lista.push(g);
+    if (!gravar(lista)) return false;
+    pausar();
+    try { envolver(ix, ini, fim, g); } finally { retomar(); }
+    sel.removeAllRanges();
+    contar();
+    return true;
+  }
+  function desembrulhar(id) {
+    pausar();
+    try {
+      var ms = document.querySelectorAll('mark.grf[data-grf="' + id + '"]');
+      for (var i = 0; i < ms.length; i++) {
+        var m = ms[i], pai = m.parentNode;
+        while (m.firstChild) pai.insertBefore(m.firstChild, m);
+        pai.removeChild(m); pai.normalize();
+      }
+    } finally { retomar(); }
+  }
+  function apagar(id) {
+    gravar(ler().filter(function (g) { return g.id !== id; }));
+    desembrulhar(id); contar();
+  }
+  function limparTela() {
+    var lista = ler();
+    for (var i = 0; i < lista.length; i++) desembrulhar(lista[i].id);
+    gravar([]); contar();
+  }
+
+  /* ---------- a paleta ---------- */
+  function estilo() {
+    if (document.getElementById('grf-estilo')) return;
+    var css = '' +
+      'mark.grf{color:#111 !important;border-radius:2px;padding:0 1px;-webkit-print-color-adjust:exact;print-color-adjust:exact}' +
+      CORES.map(function (c) { return 'mark.grf-' + c.id + '{background:' + c.fundo + ' !important}'; }).join('') +
+      'body.grf-borracha mark.grf{cursor:pointer;outline:2px dashed #b71c1c;outline-offset:1px}' +
+      /* 10/11/2026, 21h44 (titular): barra VERTICAL fina presa na borda direita, centrada na altura — a caixa no
+         canto de baixo ficava em cima das palavras. Só ícones; o texto de ajuda vai no title e no leitor de tela. */
+      '#grf-paleta{position:fixed;right:6px;top:50%;transform:translateY(-50%);z-index:2147483000;background:#fff;' +
+      'color:#1b1b1b;border:1px solid #9e9e9e;border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,.22);padding:6px 5px;' +
+      'font:13px/1.2 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;display:flex;flex-direction:column;' +
+      'align-items:center;gap:5px;text-align:center}' +
+      '#grf-paleta[hidden]{display:none}' +
+      /* com a paleta aberta, a página abre uma faixa à direita para a barra não cobrir o conteúdo */
+      'html.grf-reserva body{margin-right:54px !important}' +
+      '#grf-paleta .grf-titulo{font-size:16px;line-height:1;padding:2px 0 0;cursor:default}' +
+      '#grf-paleta .grf-conta{display:block;font-size:11px;font-weight:700;color:#0d47a1;min-height:13px}' +
+      '#grf-paleta .grf-sep{width:24px;border-top:1px solid #d0d0d0;margin:2px 0}' +
+      '#grf-paleta button{font:inherit;cursor:pointer;border:1px solid #757575;border-radius:8px;background:#fafafa;' +
+      'color:#1b1b1b;width:34px;height:34px;min-height:34px;padding:0;display:flex;align-items:center;justify-content:center;font-size:16px}' +
+      '#grf-paleta button:focus-visible{outline:3px solid #0d47a1;outline-offset:2px}' +
+      '#grf-paleta .grf-cor{border-radius:50%}' +
+      '#grf-paleta button[aria-pressed="true"]{border:3px solid #0d47a1;box-shadow:0 0 0 2px #fff inset}' +
+      '#grf-paleta .grf-fechar{width:26px;height:26px;min-height:26px;font-size:13px;border-color:#bdbdbd}' +
+      '#grf-paleta .grf-dica{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}' +
+      '#grf-paleta .grf-limpar[data-confirma="1"]{background:#b71c1c;color:#fff;border-color:#b71c1c}' +
+      '#grf-paleta .grf-aviso{position:fixed;right:52px;top:50%;transform:translateY(-50%);background:#b71c1c;color:#fff;' +
+      'padding:6px 10px;border-radius:8px;font-size:13px;white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,.25)}' +
+      '#grf-paleta .grf-aviso[hidden]{display:none}' +
+      '@media print{#grf-paleta{display:none !important}}';
+    CORES.forEach(function (c) { css += 'body.grf-cor-' + c.id + ' ::selection{background:' + c.fundo + ';color:#111}'; });
+    var s = document.createElement('style'); s.id = 'grf-estilo'; s.textContent = css;
+    (document.head || document.documentElement).appendChild(s);
+  }
+  function montar() {
+    if (paleta) return paleta;
+    estilo();
+    paleta = document.createElement('div');
+    paleta.id = 'grf-paleta'; paleta.hidden = true;
+    paleta.setAttribute('role', 'toolbar'); paleta.setAttribute('aria-label', 'Paleta de grifos');
+    var h = '<button type="button" class="grf-fechar" aria-label="Fechar a paleta (G ou Esc)" title="Fechar (G ou Esc)">✕</button>' +
+      '<span class="grf-titulo" title="Grifos: escolha a cor e selecione o texto. G abre e fecha.">🖍️</span>' +
+      '<span class="grf-conta" aria-live="polite"></span><span class="grf-sep" aria-hidden="true"></span>';
+    CORES.forEach(function (c) {
+      h += '<button type="button" class="grf-cor" data-ferramenta="' + c.id + '" aria-pressed="false" aria-label="Grifar em ' +
+        c.nome.toLowerCase() + '" title="Grifar em ' + c.nome.toLowerCase() + '" style="background:' + c.fundo + '"></button>';
+    });
+    h += '<span class="grf-sep" aria-hidden="true"></span>' +
+      '<button type="button" data-ferramenta="borracha" aria-pressed="false" aria-label="Borracha: clique num grifo para apagá-lo" title="Borracha: clique num grifo para apagá-lo">🧽</button>' +
+      '<button type="button" class="grf-limpar" aria-label="Limpar esta tela" title="Limpar os grifos desta tela">🗑</button>' +
+      '<span class="grf-aviso" hidden></span>' +
+      '<p class="grf-dica">Escolha a cor e selecione o texto: ele fica grifado. Os grifos ficam salvos neste navegador. G abre e fecha.</p>';
+    paleta.innerHTML = h;
+    paleta.addEventListener('mousedown', function (e) { if (e.target.closest('button')) e.preventDefault(); }); /* não perde a seleção */
+    paleta.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      if (b.classList.contains('grf-fechar')) return fechar();
+      if (b.classList.contains('grf-limpar')) {
+        if (!ler().length) return;
+        if (b.getAttribute('data-confirma') === '1') { clearTimeout(confirmaLimpar); limparTela(); rotuloLimpar(); return; }
+        var txt = 'Confirmar: apagar ' + ler().length + ' grifo(s)? Clique de novo.';
+        b.setAttribute('data-confirma', '1'); b.setAttribute('aria-label', txt); b.title = txt; b.textContent = '✓';
+        var av = paleta.querySelector('.grf-aviso'); av.textContent = txt; av.hidden = false;
+        confirmaLimpar = setTimeout(rotuloLimpar, 4000); return;
+      }
+      var f = b.getAttribute('data-ferramenta');
+      if (f) { escolher(f); if (f !== 'borracha') grifarSelecao(f); }
+    });
+    document.body.appendChild(paleta);
+    escolher(ferramenta);
+    return paleta;
+  }
+  function rotuloLimpar() {
+    var b = paleta && paleta.querySelector('.grf-limpar'); if (!b) return;
+    b.removeAttribute('data-confirma'); b.textContent = '🗑';
+    b.setAttribute('aria-label', 'Limpar esta tela'); b.title = 'Limpar os grifos desta tela';
+    var av = paleta.querySelector('.grf-aviso'); if (av) { av.hidden = true; av.textContent = ''; }
+  }
+  function escolher(f) {
+    ferramenta = f;
+    if (!paleta) return;
+    var bs = paleta.querySelectorAll('[data-ferramenta]');
+    for (var i = 0; i < bs.length; i++) bs[i].setAttribute('aria-pressed', bs[i].getAttribute('data-ferramenta') === f ? 'true' : 'false');
+    marcarCorpo();
+  }
+  function marcarCorpo() {
+    var c = document.body.classList, aberta = paleta && !paleta.hidden;
+    CORES.forEach(function (x) { c.remove('grf-cor-' + x.id); });
+    c.remove('grf-borracha');
+    document.documentElement.classList.toggle('grf-reserva', !!aberta);
+    if (!aberta) return;
+    if (ferramenta === 'borracha') c.add('grf-borracha'); else c.add('grf-cor-' + ferramenta);
+  }
+  function contar() {
+    if (!paleta) return;
+    var lista = ler(), vistos = 0;
+    for (var i = 0; i < lista.length; i++) if (presente(lista[i].id)) vistos++;
+    var fora = lista.length - vistos;
+    var el = paleta.querySelector('.grf-conta');
+    el.textContent = lista.length ? String(lista.length) : '';
+    el.title = lista.length ? lista.length + ' grifo(s) nesta tela' + (fora ? ' (' + fora + ' fora da vista agora)' : '') : '';
+  }
+  function abrir() { montar().hidden = false; marcarCorpo(); contar(); }
+  function fechar() { if (paleta) { paleta.hidden = true; rotuloLimpar(); } marcarCorpo(); }
+  function alternar() { if (paleta && !paleta.hidden) fechar(); else abrir(); }
+  function aviso(txt) { try { console.warn('[grifos] ' + txt); } catch (e) { /* sem console */ } if (paleta) paleta.querySelector('.grf-dica').textContent = txt; }
+  function campo(el) {
+    return !!el && (/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName) || el.isContentEditable);
+  }
+
+  /* ---------- eventos ---------- */
+  document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey || e.metaKey || e.altKey || campo(e.target)) return;
+    if (e.key === 'g' || e.key === 'G') { e.preventDefault(); alternar(); return; }
+    if (e.key === 'Escape' && paleta && !paleta.hidden) fechar();
+  });
+  document.addEventListener('mouseup', function (e) {
+    if (!paleta || paleta.hidden || ferramenta === 'borracha' || paleta.contains(e.target) || campo(e.target)) return;
+    setTimeout(function () { grifarSelecao(ferramenta); }, 0);
+  });
+  document.addEventListener('click', function (e) {
+    if (!paleta || paleta.hidden || ferramenta !== 'borracha') return;
+    var m = e.target.closest && e.target.closest('mark.grf[data-grf]');
+    if (!m) return;
+    e.preventDefault(); e.stopPropagation();
+    apagar(m.getAttribute('data-grf'));
+  }, true);
+
+  function iniciar() { estilo(); aplicar(); retomar(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar); else iniciar();
+
+  window.Grifa = { abrir: abrir, fechar: fechar, alternar: alternar, escolher: escolher, grifarSelecao: grifarSelecao,
+    aplicar: aplicar, apagar: apagar, limparTela: limparTela, lista: ler, chave: CHAVE, cores: CORES };
+})();
+
+</script>
+</body></html>

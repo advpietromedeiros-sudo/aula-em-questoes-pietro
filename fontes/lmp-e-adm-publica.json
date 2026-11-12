@@ -1,0 +1,363 @@
+{
+ "titulo": "Aula em Questões · Lei Maria da Penha e Crimes contra a Administração Pública",
+ "subtitulo": "16 questões objetivas no estilo FGV, com todas as alternativas comentadas",
+ "base": "Cadernos do Prof. Pietro Medeiros: Lei Maria da Penha (atualizado até setembro de 2026) e Crimes contra a Administração Pública (STF e STJ até 2025). Leis de 2025 e 2026 conforme o material de aula; confira a redação oficial no Planalto.",
+ "assuntos": {
+  "LMP": "Lei Maria da Penha",
+  "ADM": "Crimes contra a Administração Pública"
+ },
+ "questoes": [
+  {
+   "assunto": "LMP",
+   "tema": "Âmbito de aplicação · art. 5º · Súmula 600/STJ",
+   "enunciado": "Paula e Rodrigo **namoraram por dois anos**, cada um morando na casa dos próprios pais, e **nunca coabitaram**. Seis meses após o término, Rodrigo, inconformado, aborda Paula na saída da faculdade e a agride com socos, em **via pública**. A defesa sustenta que a Lei nº 11.340/2006 não incide no caso.",
+   "comando": "Diante do exposto, assinale a afirmativa correta.",
+   "alts": {
+    "A": "A lei não incide, pois a ausência de coabitação afasta a relação íntima de afeto prevista no art. 5º.",
+    "B": "A lei não incide, pois o relacionamento já havia terminado quando a agressão ocorreu.",
+    "C": "A lei incide, pois o art. 5º, III, alcança a relação íntima de afeto em que o agressor conviva ou tenha convivido com a ofendida, independentemente de coabitação.",
+    "D": "A lei incide apenas se a agressão tiver ocorrido no interior de uma residência, por se tratar de violência doméstica.",
+    "E": "A lei incide somente se a vítima comprovar que a agressão foi motivada exclusivamente pela condição de mulher, ônus que lhe cabe."
+   },
+   "gab": "C",
+   "coment": {
+    "A": "**Errada.** A **Súmula 600 do STJ** é expressa: para configurar a violência doméstica do art. 5º **não se exige coabitação** entre autor e vítima.",
+    "B": "**Errada.** O art. 5º, III, fala em agressor que **conviva ou tenha convivido** com a ofendida: a relação **passada** está protegida.",
+    "C": "**Correta.** Namoro é **relação íntima de afeto**; o inciso III dispensa a coabitação e abrange a relação já encerrada (Súm. 600/STJ).",
+    "D": "**Errada.** O **local não importa**; importa o contexto da relação. A violência “doméstica” da lei não exige que o fato ocorra dentro de casa.",
+    "E": "**Errada.** Desde a Lei 14.550/2023, o **art. 40-A** manda aplicar a lei a todas as situações do art. 5º **independentemente da causa ou da motivação** alegada; não há esse ônus para a vítima."
+   },
+   "dica": "Três “nãos” do âmbito: **não precisa morar junto**, **não precisa estar no relacionamento** e **não precisa ser dentro de casa**."
+  },
+  {
+   "assunto": "LMP",
+   "tema": "Art. 40-A · sujeitos · mulher trans · STF, Tema 1.412",
+   "enunciado": "Em aula sobre o alcance da Lei Maria da Penha, o professor apresentou as seguintes afirmativas:\n\nI. A agressão do irmão contra a irmã, em discussão sobre a venda da casa herdada dos pais, afasta a lei se a defesa demonstrar que a motivação foi **exclusivamente patrimonial**.\nII. A lei protege a **mulher transexual** vítima de violência no âmbito familiar, pois o critério legal é o **gênero**, e não o sexo biológico.\nIII. Na relação **homoafetiva entre duas mulheres**, a lei pode incidir, sendo **mulher** a agressora.\nIV. Segundo o STF (Tema 1.412), as **medidas protetivas** podem alcançar a violência baseada no gênero praticada por **vizinho sem vínculo afetivo** com a vítima.",
+   "comando": "Está correto o que se afirma em",
+   "alts": {
+    "A": "I e II, apenas.",
+    "B": "II e III, apenas.",
+    "C": "II, III e IV, apenas.",
+    "D": "I, III e IV, apenas.",
+    "E": "I, II, III e IV."
+   },
+   "gab": "C",
+   "coment": {
+    "A": "**Errada.** Inclui a afirmativa I, que é falsa: pelo **art. 40-A**, presente o contexto do art. 5º (aqui, o âmbito familiar), a lei se aplica qualquer que seja a causa alegada.",
+    "B": "**Errada.** Está incompleta: deixa de fora a afirmativa IV, que é verdadeira (STF, ARE 1.537.713, Tema 1.412).",
+    "C": "**Correta.** II: STJ, REsp 1.977.124/SP (o critério é o gênero). III: o art. 5º, parágrafo único, diz que as relações **independem de orientação sexual**, e o sujeito ativo pode ser mulher. IV: Tema 1.412 do STF, para as **medidas protetivas**.",
+    "D": "**Errada.** Inclui a afirmativa I (falsa) e exclui a II (verdadeira).",
+    "E": "**Errada.** A afirmativa I é falsa: a “briga patrimonial” não afasta a lei no âmbito familiar (art. 40-A)."
+   },
+   "dica": "**Sujeito passivo: mulher** (incluída a mulher trans). **Sujeito ativo: qualquer pessoa.** Cuidado: o Tema 1.412 vale para as **medidas protetivas**; para os demais institutos, continua-se analisando o art. 5º."
+  },
+  {
+   "assunto": "LMP",
+   "tema": "Formas de violência · art. 7º",
+   "enunciado": "Ana relata na delegacia que o companheiro **esconde seus documentos pessoais e o cartão do salário**, **joga fora seu anticoncepcional** para que ela engravide contra a vontade e a **proíbe de visitar a mãe**, verificando diariamente seu celular. Desde a separação, ele também **maltrata o filho comum** durante as visitas e envia vídeos a Ana dizendo “isso é culpa sua”.",
+   "comando": "À luz do art. 7º da Lei nº 11.340/2006, assinale a afirmativa correta.",
+   "alts": {
+    "A": "O rol do art. 7º é taxativo, de modo que condutas não descritas literalmente nos incisos não autorizam medida protetiva.",
+    "B": "Reter os documentos e o cartão do salário configura violência moral, pois atinge a honra da mulher.",
+    "C": "Impedir o uso de método contraceptivo é violência psicológica, já que não há relação sexual forçada.",
+    "D": "Há violência patrimonial, sexual e psicológica, além de violência vicária, que atinge o filho com o fim de atingir a mulher.",
+    "E": "Os maus-tratos ao filho escapam da Lei Maria da Penha, pois a vítima direta é a criança, protegida apenas pelo ECA."
+   },
+   "gab": "D",
+   "coment": {
+    "A": "**Errada.** O caput do art. 7º diz “**entre outras**”: o rol é **exemplificativo**.",
+    "B": "**Errada.** Reter documentos, bens e recursos é **violência patrimonial** (art. 7º, IV). Violência moral é calúnia, difamação ou injúria (inciso V).",
+    "C": "**Errada.** O inciso III define como **violência sexual** a conduta que **impeça o uso de método contraceptivo**, ainda que não haja estupro.",
+    "D": "**Correta.** Patrimonial (documentos e salário), **sexual** (anticoncepcional), psicológica (isolamento e vigilância) e **vicária** (art. 7º, VI, Lei 15.384/2026): violência contra o filho **com vistas a atingir** a mulher.",
+    "E": "**Errada.** A violência vicária foi incluída como **6ª forma** de violência justamente para esses casos; cabe medida protetiva, inclusive a suspensão das visitas."
+   },
+   "dica": "Patrimonial = **reter, subtrair, destruir**. Sexual inclui **direitos reprodutivos**. Vicária = ferir quem ela ama **para atingi-la**; matar com esse fim é **vicaricídio** (art. 121-B, hediondo)."
+  },
+  {
+   "assunto": "LMP",
+   "tema": "Medidas protetivas · natureza e procedimento",
+   "enunciado": "Maria procura a Defensoria Pública dizendo que **não quer processar** o ex-companheiro e **não registrou boletim de ocorrência**, mas tem medo, pois ele ronda sua casa. Ela saiu do imóvel com os dois filhos, foi para outra cidade e está sem renda.",
+   "comando": "Sobre as medidas protetivas de urgência, assinale a afirmativa correta.",
+   "alts": {
+    "A": "Como não há boletim de ocorrência nem inquérito, o pedido de medida protetiva deve ser indeferido por falta de procedimento principal.",
+    "B": "O juiz deve decidir em 48 horas e pode conceder a medida de imediato, sem ouvir o agressor nem o Ministério Público, que será prontamente comunicado.",
+    "C": "Concedida a medida, ela perde a eficácia em 90 dias se não for ajuizada a ação penal, conforme o STJ.",
+    "D": "O juiz pode conceder auxílio-aluguel a Maria pelo prazo de até 12 meses, renovável enquanto durar o risco.",
+    "E": "A matrícula dos filhos na escola mais próxima do novo domicílio depende da existência de vaga na rede pública."
+   },
+   "gab": "B",
+   "coment": {
+    "A": "**Errada.** Pela Lei 14.550/2023, a medida independe de **tipificação penal, ação penal, inquérito ou boletim de ocorrência**.",
+    "B": "**Correta.** Art. 18 (**48 horas**) e art. 19, § 1º: concessão **de imediato**, **independentemente de audiência das partes** e de manifestação do MP.",
+    "C": "**Errada.** STJ, **Tema 1.249**: a medida é **tutela inibitória**, sem prazo predeterminado; vigora **enquanto persistir o risco**.",
+    "D": "**Errada.** O auxílio-aluguel do art. 23, VI, é por período **não superior a 6 meses**.",
+    "E": "**Errada.** O art. 23, V, garante a matrícula ou transferência **independentemente da existência de vaga**."
+   },
+   "dica": "Medida protetiva **protege, não pune**: sem B.O., sem processo, **48 h** para decidir, **dura enquanto houver risco**. Auxílio-aluguel: **até 6 meses**."
+  },
+  {
+   "assunto": "LMP",
+   "tema": "Afastamento imediato (art. 12-C) e monitoração eletrônica",
+   "enunciado": "Num sábado à noite, em município de 8 mil habitantes que **não é sede de comarca**, a Polícia Militar atende mulher ameaçada com faca pelo companheiro. **Não há delegado disponível** naquele momento. Semanas antes, o mesmo homem já havia **descumprido** medida protetiva de proibição de contato.",
+   "comando": "Assinale a afirmativa correta.",
+   "alts": {
+    "A": "Somente o juiz pode afastar o agressor do lar; ao policial cabe apenas lavrar a ocorrência e aguardar a decisão judicial.",
+    "B": "O policial pode afastar imediatamente o agressor do lar, comunicando o juiz em até 24 horas, que decidirá em igual prazo sobre a manutenção da medida, com ciência ao Ministério Público.",
+    "C": "O delegado só poderia afastar o agressor se o município fosse sede de comarca, situação em que o juiz é comunicado em 48 horas.",
+    "D": "O afastamento imediato pressupõe risco à vida ou à integridade física, não abrangendo o risco à integridade sexual, moral ou patrimonial.",
+    "E": "Havendo descumprimento anterior, a monitoração eletrônica é vedada, pois o agressor deve ser necessariamente preso preventivamente."
+   },
+   "gab": "B",
+   "coment": {
+    "A": "**Errada.** O art. 12-C escalona: **juiz** (regra); **delegado**, se o município não for sede de comarca; **policial**, se também não houver delegado disponível.",
+    "B": "**Correta.** Art. 12-C, III, e § 1º: comunicação ao juiz em **24 horas**, que decide em **igual prazo**, dando ciência ao MP.",
+    "C": "**Errada.** É o inverso: o delegado atua justamente quando o município **não** é sede de comarca; e o prazo de comunicação é de **24 horas**.",
+    "D": "**Errada.** A Lei 15.411/2026 ampliou o art. 12-C para o risco à integridade **sexual, moral ou patrimonial**.",
+    "E": "**Errada.** Descumprimento anterior torna a monitoração **prioritária** (art. 22, § 6º, Lei 15.383/2026); se não a aplicar, o juiz deve **fundamentar**."
+   },
+   "dica": "Afastamento: **juiz → delegado (sem comarca) → policial (sem comarca e sem delegado)**, comunicação em **24 h**. Tornozeleira: **prioridade** se já houve descumprimento."
+  },
+  {
+   "assunto": "LMP",
+   "tema": "Descumprimento de medida protetiva · art. 24-A",
+   "enunciado": "A **Vara de Família** deferiu medida protetiva proibindo Rafael de manter contato com Clara por qualquer meio. Devidamente intimado, Rafael pede à **irmã** que diga a Clara que “ele vai ficar louco se ela não voltar”. Clara comunica o fato e Rafael é **preso em flagrante**. Na delegacia, o advogado pede o arbitramento de fiança.",
+   "comando": "Assinale a afirmativa correta.",
+   "alts": {
+    "A": "O fato é atípico, pois a medida foi deferida por juízo cível, e o art. 24-A só alcança decisões do juízo criminal.",
+    "B": "O fato é atípico, pois Rafael não fez contato direto com Clara, mas por meio de terceira pessoa.",
+    "C": "Rafael responde por desobediência (art. 330 do CP), única figura cabível para o descumprimento de ordem judicial.",
+    "D": "Há o crime do art. 24-A, punido com reclusão de 2 a 5 anos e multa, e apenas a autoridade judicial pode conceder fiança.",
+    "E": "Há o crime do art. 24-A, e o delegado pode arbitrar fiança, pois a pena máxima não ultrapassa quatro anos."
+   },
+   "gab": "D",
+   "coment": {
+    "A": "**Errada.** Art. 24-A, § 1º: o crime **independe da competência civil ou criminal** do juiz que deferiu a medida.",
+    "B": "**Errada.** O contato **por interposta pessoa** também descumpre a proibição de contato “por qualquer meio”.",
+    "C": "**Errada.** Desde a Lei 13.641/2018 há crime **específico** (art. 24-A); o STJ já entendia que não era desobediência.",
+    "D": "**Correta.** Pena de **reclusão de 2 a 5 anos** e multa (Lei 14.994/2024) e, no flagrante, **só o juiz** concede fiança (§ 2º).",
+    "E": "**Errada.** O § 2º veda a fiança pelo delegado; além disso, a pena máxima é de **5 anos**."
+   },
+   "dica": "Art. 24-A: **2 a 5 anos**, **fiança só pelo juiz**, vale para medida **cível ou criminal**. Violar área de exclusão ou tornozeleira: **+1/3 até a metade** (§ 4º)."
+  },
+  {
+   "assunto": "LMP",
+   "tema": "Ação penal · art. 16 · prazo de 12 meses",
+   "enunciado": "Joana sofreu **lesão corporal** e **ameaça** praticadas pelo companheiro, por razões da condição do sexo feminino. Dias depois, volta à delegacia dizendo que “quer **retirar a queixa**”, porque ele prometeu mudar. Paralelamente, ela é **perseguida** pelo ex-namorado (art. 147-A do CP) há **oito meses** e só agora decide representar.",
+   "comando": "Assinale a afirmativa correta.",
+   "alts": {
+    "A": "Joana pode se retratar da representação quanto à lesão e à ameaça, em audiência designada pelo juiz antes do recebimento da denúncia.",
+    "B": "A ameaça contra a mulher por razões da condição do sexo feminino continua dependendo de representação, ainda que a lesão seja incondicionada.",
+    "C": "A representação pela perseguição é intempestiva, pois o prazo decadencial é de seis meses contados do conhecimento da autoria.",
+    "D": "A audiência do art. 16 deve ser designada de ofício em todo processo de violência doméstica, para confirmar a vontade da vítima.",
+    "E": "Lesão e ameaça são de ação pública incondicionada; a representação pela perseguição é tempestiva, pois o prazo passou a ser de 12 meses."
+   },
+   "gab": "E",
+   "coment": {
+    "A": "**Errada.** Lesão corporal doméstica é **incondicionada** (Súm. 542/STJ) e, desde a Lei 14.994/2024, a ameaça por razões de gênero também: **não há representação a retratar**.",
+    "B": "**Errada.** A Lei 14.994/2024 tornou essa ameaça de **ação pública incondicionada**, com **pena em dobro**.",
+    "C": "**Errada.** A Lei 15.438/2026 ampliou o prazo para **12 meses** nos crimes de violência doméstica de ação condicionada ou privada.",
+    "D": "**Errada.** Pela Lei 15.380/2026, a audiência **só é designada se houver manifestação expressa da vítima**, antes do recebimento da denúncia.",
+    "E": "**Correta.** Lesão e ameaça de gênero: **incondicionadas**. Perseguição: **condicionada**, mas a representação aos 8 meses está dentro dos **12 meses**."
+   },
+   "dica": "Incondicionadas: **lesão** e **ameaça de gênero**. Condicionada: **perseguição**. Prazo para representar ou oferecer queixa: **12 meses**. Audiência do art. 16: **só a pedido dela**."
+  },
+  {
+   "assunto": "LMP",
+   "tema": "Súmulas do STJ, vedações e prisão preventiva",
+   "enunciado": "Pedro deu um **tapa** na companheira, sem deixar lesão (vias de fato). Na audiência, a defesa pede: (1) **transação penal**; (2) aplicação do **princípio da insignificância**; (3) em caso de condenação, pena de **cesta básica** ou **substituição** da pena privativa de liberdade por restritiva de direitos. O Ministério Público, por sua vez, sustenta que o juiz poderia ter decretado a **prisão preventiva de ofício**, com base no art. 20 da Lei nº 11.340/2006.",
+   "comando": "Assinale a afirmativa correta.",
+   "alts": {
+    "A": "Nenhum dos pedidos da defesa procede, e a preventiva exige requerimento do MP, do querelante ou do assistente, ou representação do delegado, segundo o entendimento que prevalece após o Pacote Anticrime.",
+    "B": "Aplica-se a insignificância, pois o tapa não deixou lesão e o dano à integridade física foi ínfimo.",
+    "C": "Cabe transação penal, pois as vias de fato são contravenção de menor potencial ofensivo, sujeita à Lei nº 9.099/1995.",
+    "D": "É possível substituir a pena por restritiva de direitos, pois as súmulas do STJ vedam apenas a pena de cesta básica.",
+    "E": "O juiz pode decretar a preventiva de ofício, pois o art. 20 da Lei Maria da Penha prevalece sobre o CPP por especialidade."
+   },
+   "gab": "A",
+   "coment": {
+    "A": "**Correta.** Súm. 536, 589 e **588** (sem substituição havendo violência) e art. **17** (sem cesta básica). Quanto à preventiva, prevalece no STF e no STJ a **vedação da decretação de ofício** (CPP, arts. 282, § 2º, e 311).",
+    "B": "**Errada.** **Súmula 589/STJ**: é inaplicável a insignificância nos crimes e **contravenções** contra a mulher no âmbito doméstico.",
+    "C": "**Errada.** Art. 41 (não se aplica a Lei 9.099) e **Súmula 536/STJ**: não cabem transação penal nem suspensão condicional do processo.",
+    "D": "**Errada.** A **Súmula 588/STJ** impede a substituição por restritiva de direitos quando há violência ou grave ameaça.",
+    "E": "**Errada.** Apesar da redação do art. 20, o entendimento dominante após a Lei 13.964/2019 veda a preventiva de ofício."
+   },
+   "dica": "Portas fechadas: **sem Lei 9.099** (art. 41; Súm. 536), **sem insignificância** (Súm. 589), **sem restritiva com violência** (Súm. 588), **sem cesta básica** (art. 17). Preventiva: **não de ofício**."
+  },
+  {
+   "assunto": "ADM",
+   "tema": "Funcionário público para fins penais · art. 327 · Súmula 599",
+   "enunciado": "Sobre o conceito de funcionário público para fins penais e a teoria geral dos crimes contra a Administração Pública, analise as afirmativas:\n\nI. O **estagiário** de órgão público e o **advogado dativo** são funcionários públicos para fins penais, ainda que não remunerados pelos cofres públicos.\nII. O **depositário judicial** de bens particulares penhorados é funcionário público por equiparação e responde por peculato se deles se apropriar.\nIII. A causa de aumento de um terço do art. 327, § 2º, alcança o dirigente de **autarquia**, por integrar a administração indireta.\nIV. O princípio da insignificância é, em regra, inaplicável aos crimes contra a Administração Pública, **ressalvado o descaminho**, até o limite de R$ 20.000,00 de tributo iludido, sem reiteração.",
+   "comando": "Está correto o que se afirma em",
+   "alts": {
+    "A": "I e IV, apenas.",
+    "B": "I e II, apenas.",
+    "C": "II e III, apenas.",
+    "D": "I, III e IV, apenas.",
+    "E": "I, II, III e IV."
+   },
+   "gab": "A",
+   "coment": {
+    "A": "**Correta.** I: art. 327, caput, “**embora transitoriamente ou sem remuneração**” (STJ: estagiário e dativo). IV: **Súmula 599/STJ** e a exceção do **descaminho** (REsp 1.709.029/MG, repetitivo; Tema 1.218 sobre reiteração).",
+    "B": "**Errada.** A afirmativa II é falsa: o depositário judicial recebe um **múnus** do juízo e **não** é funcionário público (STJ, HC 402.949/SP).",
+    "C": "**Errada.** II e III são falsas. O § 2º não menciona **autarquia**, e a analogia *in malam partem* é vedada (STF, AO 2.093/RN).",
+    "D": "**Errada.** Inclui a afirmativa III, que é falsa.",
+    "E": "**Errada.** II e III são falsas."
+   },
+   "dica": "O critério é a **função exercida**, não o vínculo. § 2º: **direta, SEM, empresa pública e fundação**, **sem autarquia**. Súm. 599 tem exceções: **descaminho** e **cigarros até 1.000 maços**."
+  },
+  {
+   "assunto": "ADM",
+   "tema": "Peculato e emprego irregular de verbas · arts. 312 e 315",
+   "enunciado": "Carla, servidora do **setor de RH** de uma secretaria municipal, usa seu crachá para entrar à noite no **depósito da merenda escolar**, que **não está sob sua guarda**, e leva caixas de leite em pó para revender. No mesmo órgão, o tesoureiro **deixa o cofre aberto** ao sair para almoçar, e um visitante subtrai o dinheiro. Já o secretário, sem qualquer proveito pessoal, aplica verba vinculada por lei à reforma de uma UBS na **recuperação de uma ponte**.",
+   "comando": "Assinale a afirmativa correta.",
+   "alts": {
+    "A": "Carla comete peculato-apropriação, pois se apropriou de bem público em razão do cargo.",
+    "B": "Carla comete peculato-furto; o tesoureiro, peculato culposo, cuja punibilidade se extingue se reparar o dano antes da sentença irrecorrível; o secretário, emprego irregular de verbas públicas.",
+    "C": "O tesoureiro e o visitante são coautores de peculato culposo, pois o descuido de um permitiu a subtração pelo outro.",
+    "D": "Se o tesoureiro reparar o dano após o trânsito em julgado, extingue-se a sua punibilidade.",
+    "E": "O secretário comete peculato-desvio, pois deu às verbas destinação diversa da prevista em lei."
+   },
+   "gab": "B",
+   "coment": {
+    "A": "**Errada.** Carla **não tinha a posse** dos bens; valeu-se da **facilidade** do cargo para subtraí-los: é **peculato-furto** (art. 312, § 1º).",
+    "B": "**Correta.** Peculato-furto (sem posse, com facilidade); **peculato culposo** com reparação **antes** da sentença irrecorrível extinguindo a punibilidade (§ 3º); e **art. 315**, porque o desvio favoreceu a **própria Administração** (STF, Inq 3.731/DF).",
+    "C": "**Errada.** Não há concurso de pessoas entre crime culposo e doloso: o visitante responde por **furto**; o tesoureiro, por **peculato culposo**.",
+    "D": "**Errada.** Após a sentença irrecorrível, a reparação apenas **reduz a pena pela metade**.",
+    "E": "**Errada.** No peculato-desvio há proveito **próprio ou alheio**. Desvio em favor da própria Administração, sem proveito pessoal, é **emprego irregular de verbas** (art. 315)."
+   },
+   "dica": "**Tem posse** → apropriação ou desvio. **Não tem posse, usa a facilidade** → furto. **Descuidou** → culposo (repara antes da sentença irrecorrível: extingue). **Desvio para a própria Administração** → art. 315."
+  },
+  {
+   "assunto": "ADM",
+   "tema": "Concussão, excesso de exação e corrupção passiva",
+   "enunciado": "Fiscal da vigilância sanitária, em vistoria numa lanchonete, diz ao dono: “Encontrei irregularidades. **Ou você me dá R$ 1.500 até sexta**, ou interdito o estabelecimento”. O comerciante procura a polícia, e o fiscal é surpreendido ao **receber o envelope na sexta-feira**. Em outra situação, um agente fiscal recebe o ISS **devido** pago por uma feirante e **embolsa o valor**.",
+   "comando": "Assinale a afirmativa correta.",
+   "alts": {
+    "A": "O fiscal sanitário pratica corrupção passiva, pois solicitou vantagem indevida, e o crime se consumou com o recebimento do envelope.",
+    "B": "O fiscal sanitário pratica extorsão, pois houve ameaça de interdição, e o comerciante, corrupção ativa, por ter entregado o dinheiro.",
+    "C": "O fiscal sanitário pratica concussão, consumada no momento da exigência; a entrega na sexta-feira é mero exaurimento, que, por si só, não autoriza a prisão em flagrante.",
+    "D": "O agente fiscal que embolsa o ISS devido pratica excesso de exação qualificado (art. 316, § 2º).",
+    "E": "A concussão tem pena menor que a da corrupção passiva, pois a Lei nº 13.964/2019 só alterou a pena desta última."
+   },
+   "gab": "C",
+   "coment": {
+    "A": "**Errada.** Houve **exigência** com intimidação (“ou paga, ou interdito”), não mera solicitação: é **concussão**.",
+    "B": "**Errada.** Extorsão exige **violência ou grave ameaça**; aqui, o temor decorre do **poder do cargo**. O comerciante é **vítima**, não comete corrupção ativa.",
+    "C": "**Correta.** Concussão é **formal**: consuma-se com a exigência; a entrega é **exaurimento** (STJ, HC 266.460/ES, Info 564).",
+    "D": "**Errada.** O § 2º pressupõe tributo **indevido** desviado. Apropriar-se de tributo **devido** é **peculato**.",
+    "E": "**Errada.** O Pacote Anticrime elevou a pena da **concussão** para **2 a 12 anos**, igualando-a à da corrupção passiva."
+   },
+   "dica": "**Exigir** = concussão. **Solicitar** = corrupção passiva. **Violência ou grave ameaça** = extorsão. Tributo **devido** embolsado = peculato; **indevido** desviado = 316, § 2º."
+  },
+  {
+   "assunto": "ADM",
+   "tema": "Corrupção ativa, corrupção privilegiada e prevaricação",
+   "enunciado": "Considere as situações: (1) flagrado com um cigarro de maconha, Lucas **oferece R$ 200** ao policial para “esquecer o caso”, mas o policial **recusa** e o conduz à delegacia; (2) o agente de trânsito **pede R$ 300** a um motorista sem CNH, que **paga**; (3) a pedido de um **vereador amigo**, sem receber vantagem, um servidor passa o processo do eleitor dele à frente da fila; (4) correição encontra centenas de boletins parados numa delegacia, por **desorganização e comodismo** do delegado.",
+   "comando": "Assinale a afirmativa correta.",
+   "alts": {
+    "A": "Em (1), não há crime, pois o policial recusou a oferta e o crime antecedente sequer admite prisão.",
+    "B": "Em (2), o motorista comete corrupção ativa na modalidade “dar”, por ter entregado o dinheiro.",
+    "C": "Em (3), o servidor comete prevaricação, pois agiu para satisfazer interesse pessoal.",
+    "D": "Em (1), há corrupção ativa consumada; em (3), corrupção passiva privilegiada; e, em (4), a desídia, por si só, não configura prevaricação.",
+    "E": "Em (4), o delegado comete prevaricação, pois o dolo de omitir o ato de ofício basta para a tipicidade."
+   },
+   "gab": "D",
+   "coment": {
+    "A": "**Errada.** Corrupção ativa é **formal**: consuma-se quando o funcionário toma ciência da oferta, ainda que a recuse (STJ, AREsp 2.007.599/RJ, Info 735).",
+    "B": "**Errada.** O art. 333 só tem os núcleos **oferecer** e **prometer**; quando a iniciativa é do funcionário, quem paga **não** comete corrupção ativa.",
+    "C": "**Errada.** Ceder a **pedido ou influência de outrem** é **corrupção passiva privilegiada** (art. 317, § 2º); a prevaricação exige interesse ou sentimento **pessoal**.",
+    "D": "**Correta.** (1) ativa consumada com a oferta; (3) art. 317, § 2º; (4) STJ, Info 846 (2025): desídia e comodismo não revelam, de forma objetiva e concreta, o **fim especial** da prevaricação.",
+    "E": "**Errada.** A prevaricação exige o **dolo específico** de satisfazer interesse ou sentimento pessoal (STJ, AgRg no AREsp 2.693.820/SP)."
+   },
+   "dica": "Ativa: **oferecer/prometer**, sem “dar”. Pedido de **outrem** = 317, § 2º. Sentimento **pessoal** = 319. **Preguiça não é prevaricação.**"
+  },
+  {
+   "assunto": "ADM",
+   "tema": "Resistência, desobediência, desacato, tráfico de influência e exploração de prestígio",
+   "enunciado": "Durante policiamento ostensivo noturno, um motociclista **ignora a ordem de parada** da viatura e foge. Detido, **deita-se no chão** e se agarra a uma grade para não ser algemado, sem agredir ninguém. Na delegacia, **xinga três policiais** de uma só vez. Dias depois, um vizinho do preso pede a ele cinco salários mínimos **a pretexto de influir no depoimento de uma testemunha**, insinuando que parte iria para ela.",
+   "comando": "Assinale a afirmativa correta.",
+   "alts": {
+    "A": "A fuga à ordem de parada é atípica, pois a recusa em parar só gera infração administrativa de trânsito.",
+    "B": "Ao se agarrar à grade para evitar as algemas, o preso cometeu resistência.",
+    "C": "Os xingamentos aos três policiais configuram três desacatos, em concurso formal.",
+    "D": "O vizinho comete tráfico de influência, com aumento da metade por insinuar que a vantagem também se destina à testemunha.",
+    "E": "A fuga configura desobediência, segundo o STJ (Tema 1.060); a resistência passiva é atípica; há desacato único; e o vizinho comete exploração de prestígio, com aumento de um terço."
+   },
+   "gab": "E",
+   "coment": {
+    "A": "**Errada.** STJ, **Tema 1.060**: desobedecer à ordem de parada em **policiamento ostensivo** configura o art. 330. Atípica seria a fuga de mera fiscalização de **trânsito**.",
+    "B": "**Errada.** Resistência exige **violência ou ameaça** contra o executor; a **resistência passiva** é atípica.",
+    "C": "**Errada.** O bem jurídico é o **prestígio da função**, atingido uma única vez: **crime único** (STJ, AgRg no RHC 136.918/SP).",
+    "D": "**Errada.** Influência sobre **testemunha**, juiz, jurado, MP, perito, tradutor ou intérprete é **exploração de prestígio** (art. 357), com aumento de **1/3**.",
+    "E": "**Correta.** Tema 1.060; resistência passiva atípica; desacato único; art. 357, parágrafo único."
+   },
+   "dica": "Ordem de parada: **ostensivo = crime**; **trânsito = infração administrativa**. Resistência exige **violência ou ameaça**. Funcionário em geral = **332 (+ metade)**; juiz, testemunha e afins = **357 (+ 1/3)**."
+  },
+  {
+   "assunto": "ADM",
+   "tema": "Descaminho, contrabando e sonegação previdenciária",
+   "enunciado": "Um “sacoleiro” volta do Paraguai com **30 celulares** escondidos em fundo falso, sem declarar à Receita, iludindo R$ 9.000,00 em tributos; é a **primeira** vez que responde por fato do gênero. Uma tabacaria do bairro expõe à venda **400 maços** de cigarros paraguaios sem registro na Anvisa e **15 cigarros eletrônicos**. Uma empresária mantém 25 empregados “por fora”, **omitindo-os da GFIP**.",
+   "comando": "Assinale a afirmativa correta.",
+   "alts": {
+    "A": "O sacoleiro comete contrabando, pois os celulares entraram clandestinamente no país.",
+    "B": "Cabe a insignificância para o sacoleiro e para os 400 maços, mas não para os cigarros eletrônicos; a empresária pratica sonegação de contribuição previdenciária (art. 337-A).",
+    "C": "Se o sacoleiro pagar integralmente o tributo antes do recebimento da denúncia, extingue-se a punibilidade, como nos crimes materiais contra a ordem tributária.",
+    "D": "A insignificância alcança também os cigarros eletrônicos, pois a quantidade apreendida não ultrapassa 1.000 unidades.",
+    "E": "A empresária pratica apropriação indébita previdenciária, admitindo-se a continuidade delitiva com a sonegação previdenciária."
+   },
+   "gab": "B",
+   "coment": {
+    "A": "**Errada.** Celular é mercadoria **permitida**; iludir o tributo é **descaminho** (art. 334). Contrabando envolve mercadoria **proibida**.",
+    "B": "**Correta.** Descaminho até **R$ 20 mil**, sem reiteração (REsp 1.709.029/MG; Tema 1.218); cigarros até **1.000 maços** (Tema 1.143); **vape sem insignificância** (STJ, Info 853); omitir segurados da GFIP é o **art. 337-A, I**.",
+    "C": "**Errada.** Para o STJ, o pagamento **não** extingue a punibilidade do descaminho, crime **formal** que tutela também o controle aduaneiro.",
+    "D": "**Errada.** O parâmetro de 1.000 maços **não se estende** aos cigarros eletrônicos (STJ, AgRg no REsp 2.184.785/PR).",
+    "E": "**Errada.** Omitir segurados é **fraude na informação** (337-A), não falta de repasse do descontado (168-A); e o STJ **não admite continuidade** entre as duas figuras."
+   },
+   "dica": "**Permitida** + tributo iludido = descaminho (1 a 4 anos). **Proibida** = contrabando (2 a 5 anos). Não repassar = **168-A**; fraudar a informação = **337-A**."
+  },
+  {
+   "assunto": "ADM",
+   "tema": "Crimes em licitações e contratos · arts. 337-E a 337-P",
+   "enunciado": "Em município do interior: (1) empresas combinam previamente quem vencerá cada pregão, apresentando “propostas de cobertura”, sem que se apure prejuízo ao erário; (2) o secretário deixa vencer o contrato de limpeza dos hospitais e contrata **diretamente**, por “emergência”, a empresa do sobrinho do prefeito; (3) a contratada para fornecer merenda em pacotes de 10 kg entrega pacotes de 9 kg, **faturando 10 kg**; (4) a sentença fixa a pena de multa.",
+   "comando": "Assinale a afirmativa correta.",
+   "alts": {
+    "A": "Em (1), há frustração do caráter competitivo da licitação, crime formal (Súmula 645/STJ); em (2), contratação direta ilegal (art. 337-E); em (3), fraude em licitação ou contrato (art. 337-L).",
+    "B": "Em (4), a multa não pode superar 2% do valor do contrato licitado.",
+    "C": "Em (1), não há crime, pois a fraude à licitação exige a comprovação de prejuízo ao erário.",
+    "D": "Em (2), o fato é atípico, pois a emergência autoriza a contratação direta, ainda que decorrente da má gestão do administrador.",
+    "E": "Em (3), há apenas inadimplemento contratual, sem relevância penal, ainda que a nota fiscal registre quantidade maior que a entregue."
+   },
+   "gab": "A",
+   "coment": {
+    "A": "**Correta.** Cartel com propostas de cobertura frustra a competição (337-F); a contratação direta fora das hipóteses legais é o 337-E; entregar quantidade diversa da contratada, com prejuízo, é o 337-L, I.",
+    "B": "**Errada.** Art. 337-P: os 2% são **piso** (“não poderá ser **inferior**”), e não teto.",
+    "C": "**Errada.** **Súmula 645/STJ**: a fraude à licitação (hoje art. 337-F) é **formal** e dispensa prejuízo ou vantagem efetiva.",
+    "D": "**Errada.** A doutrina majoritária entende que a **emergência fabricada** por desídia ou má gestão não legitima a dispensa.",
+    "E": "**Errada.** Entregar quantidade menor faturando a maior é **fraude** em prejuízo da Administração (337-L, I). Sem a fraude na nota, poderia ser mero inadimplemento."
+   },
+   "dica": "Os “4 a 8 anos”: **E–F–H–L**. **337-F é formal** (Súm. 645); **337-L exige prejuízo**. Multa: **piso de 2%** do contrato."
+  },
+  {
+   "assunto": "ADM",
+   "tema": "Crimes contra a Administração da Justiça · arts. 338-A a 352",
+   "enunciado": "Analise as situações: (1) após a absolvição de um réu, o autor da notícia-crime é denunciado por **denunciação caluniosa** apenas porque a acusação não se comprovou; (2) uma testemunha mente em juízo para ajudar o amigo réu, instruída pelo advogado deste, e **se retrata antes da sentença**; (3) a **mãe** esconde o filho foragido em casa e o **irmão** dele guarda o dinheiro do roubo para entregá-lo depois; (4) um preso foge pela porta da cela, deixada aberta, **sem violência**; (5) preso em flagrante pelo descumprimento de medida protetiva deferida em favor de **idosa** (art. 338-A do CP), o autor requer fiança ao delegado.",
+   "comando": "Assinale a afirmativa correta.",
+   "alts": {
+    "A": "Em (1), a absolvição do réu basta, por si só, para a condenação por denunciação caluniosa.",
+    "B": "Em (2), a retratação extingue a punibilidade da testemunha, mas não a do advogado, que responde como coautor.",
+    "C": "Em (3), mãe e irmão ficam isentos de pena, pois a escusa absolutória alcança tanto o favorecimento pessoal quanto o real.",
+    "D": "Em (4), há fato atípico penalmente, embora configure falta grave; e, em (5), só a autoridade judicial pode conceder fiança.",
+    "E": "Em (5), o delegado pode arbitrar fiança, pois a regra que a reserva ao juiz só vale para a Lei Maria da Penha."
+   },
+   "gab": "D",
+   "coment": {
+    "A": "**Errada.** A denunciação caluniosa exige **dolo direto** (saber que o imputado é inocente); a absolvição, por si só, não prova a má-fé (STF, Inq 3.133/AC).",
+    "B": "**Errada.** O falso testemunho é de mão própria, mas admite **participação**, e a **retratação se estende aos partícipes** (STJ, HC 36.287/SP).",
+    "C": "**Errada.** A mãe está isenta (favorecimento **pessoal**, art. 348, § 2º), mas o irmão que garante o **proveito** do crime pratica favorecimento **real** (art. 349), **sem escusa**.",
+    "D": "**Correta.** O art. 352 exige **violência contra a pessoa**; a fuga sem violência é **falta grave** (LEP, art. 50, II). No art. **338-A** (Lei 15.280/2025), o § 2º reserva a fiança ao **juiz**.",
+    "E": "**Errada.** O art. 338-A, tipo geral criado em 2025 para as demais medidas protetivas, também reserva a fiança **apenas** à autoridade judicial."
+   },
+   "dica": "Denunciação caluniosa: **dolo direto**. Falso testemunho: retratação **até a sentença**, vale para o **partícipe**. Escusa familiar: **só no favorecimento pessoal**. Fuga sem violência: **não é crime**."
+  }
+ ]
+}
