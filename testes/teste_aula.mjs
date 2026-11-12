@@ -65,6 +65,10 @@ ok('A6 · tecla G abre a paleta de grifos', await av(`(()=>{const p=document.get
 await tecla('g');
 ok('A7 · texto justificado e negrito convertidos (sem ** na tela)', !(await av(`document.body.innerText.includes('**')`)) && /p,li,\.txt\{text-align:justify/.test(readFileSync(ARQ, 'utf8')));
 const R = D.revisao || [];
+if (!R.length) {
+  await tecla('v'); await espera(400);
+  ok('A9 · aula sem revisão visual: sem botão Revisão e a tecla V não abre nada', !(await av(`!!document.getElementById('bRev')`)) && !(await av(`!!document.querySelector('.rev')`)));
+} else {
 await tecla('v'); await espera(1500);
 // pela internet as miniaturas demoram mais; força o carregamento das que estão fora da tela e espera até 20 s
 await av(`document.querySelectorAll('.rev img').forEach(i=>i.loading='eager')`);
@@ -82,6 +86,7 @@ const vv = await av(`({on:document.getElementById('vis').classList.contains('on'
 await print('5-revisao-visor.png');
 await tecla('Escape'); await espera(300);
 ok('A10 · visor em tela cheia: zoom, → troca de imagem sem mexer nas questões, correções na barra, Esc fecha', z !== 'none' && vv.on && vv.num === '6 / ' + R.length && vv.err > 20 && vv.q === -2 && !(await av(`document.getElementById('vis').classList.contains('on')`)), JSON.stringify(vv) + ' ' + z);
+}
 ok('A8 · nenhum erro de script', erros.length === 0, erros.slice(0, 3).join(' | '));
 ws.close(); nav.kill(); try { rmSync(perfil, { recursive: true, force: true }); } catch { }
 console.log(`\n${res.filter(Boolean).length} de ${res.length} OK`);

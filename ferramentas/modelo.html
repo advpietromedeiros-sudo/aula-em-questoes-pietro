@@ -112,7 +112,7 @@ function capa() {
   const grupos = Object.keys(D.assuntos).map(a => `<h3 style="margin:18px 0 0"><span class="rot"><span class="ass ${a}">${esc(D.assuntos[a])}</span></span></h3>` +
     `<div class="lista">${Q.map((q, i) => q.assunto === a ? `<button data-ir="${i}"><span class="n">${i + 1}.</span><span>${esc(q.tema)}${st.rev[i] ? ' ✔' : ''}</span></button>` : '').join('')}</div>`).join('');
   $('palco').innerHTML = `<section class="cartao capa"><div class="rot">Aula em questões · estilo FGV</div><h2>${esc(D.titulo)}</h2><p>${esc(D.subtitulo)}. Base: ${esc(D.base)}</p>${grupos}` +
-    `<p class="atalhos"><kbd>→</kbd> avança (revela o gabarito e, depois, um comentário por vez) · <kbd>←</kbd> volta · <kbd>A</kbd>–<kbd>E</kbd> marca a resposta da turma · <kbd>R</kbd> revela tudo · <kbd>+</kbd>/<kbd>−</kbd> letra · <kbd>F</kbd> tela cheia · <kbd>G</kbd> grifos · <kbd>V</kbd> revisão visual · <kbd>Home</kbd> esta lista</p>` +
+    `<p class="atalhos"><kbd>→</kbd> avança (revela o gabarito e, depois, um comentário por vez) · <kbd>←</kbd> volta · <kbd>A</kbd>–<kbd>E</kbd> marca a resposta da turma · <kbd>R</kbd> revela tudo · <kbd>+</kbd>/<kbd>−</kbd> letra · <kbd>F</kbd> tela cheia · <kbd>G</kbd> grifos ${R.length ? '· <kbd>V</kbd> revisão visual ' : ''}· <kbd>Home</kbd> esta lista</p>` +
     `<div class="passo">${R.length ? `<button class="bt sec" id="bRev">📚 Revisão visual (${R.length} imagens)</button>` : '<span></span>'}<button class="bt" data-ir="0">Começar pela questão 1 →</button></div></section>`;
 }
 function ordemComent(q) { return [q.gab].concat(L.filter(x => x !== q.gab)); }   // primeiro a correta, depois as erradas
@@ -206,7 +206,7 @@ document.addEventListener('keydown', e => {
     else if (k === '+' || k === '=') vzoom(1.4); else if (k === '-') vzoom(1 / 1.4); else if (k === '0') vcaber(); else if (k === 'c' || k === 'C') $('verr').classList.toggle('on');
     return;
   }
-  if (k === 'v' || k === 'V') return revisao();
+  if ((k === 'v' || k === 'V') && R.length) return revisao();
   if (st.q === -2) return;
   if (k === 'ArrowRight' || k === ' ' || k === 'PageDown' || k === 'Enter') { e.preventDefault(); avancar(); }
   else if (k === 'ArrowLeft' || k === 'PageUp') { e.preventDefault(); voltar(); }
@@ -216,6 +216,7 @@ document.addEventListener('keydown', e => {
   else if (k === 'f' || k === 'F') tela(); else if (k === 'Home') capa();
 });
 zoom(st.z || 1);
+if (!R.length) { $('bRev').remove(); if (st.q === -2) st.q = -1; }  // aula sem revisão visual: sem o botão
 if (st.q >= 0 && st.q < Q.length) mostrar(false); else if (st.q >= Q.length) fim(); else if (st.q === -2 && R.length) revisao(); else capa();
 </script>
 <script>window.GRIFA_CHAVE = 'grifos:v1:aula-questoes:__TITULO_CURTO__';</script>

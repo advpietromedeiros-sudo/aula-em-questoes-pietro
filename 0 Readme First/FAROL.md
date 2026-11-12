@@ -15,10 +15,14 @@
 - ✅ **12/11/2026, 11h2x — revisão atualizada** com as 3 imagens reenviadas pelo titular: a versão ampliada substitui a antiga
   "aula de revisão"; entram "aula 2 · correções" e "licitações". 9 imagens, 31 correções na tela; publicado e testado no site (10/10).
 
+- ✅ **12/11/2026, 11h3x — aba Revisão retirada** a pedido do titular ("retire a aba revisão, as tirinhas pode tirar"; "se tiver erro
+  pode deixar sem a aba revisão"). As imagens reenviadas às 11h29 eram as mesmas três, com os mesmos erros. O código da revisão fica
+  no modelo (aparece só se a fonte tiver `revisao`), para quando vierem imagens sem erro.
+
 ## Próximos passos
 
 1. Titular revisar as questões em sala; ajustes vão em `fontes/lmp-e-adm-publica.json` e se remonta.
-2. Imagens que ainda pedem refação: "crimes em quadrinhos" e "capítulo I" (concussão 2 a 8) e "licitações" (9 erros).
+2. Revisão visual: volta quando o titular mandar imagens refeitas e a conferência não achar erro.
 
 ## O que fica rodando
 
