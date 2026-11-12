@@ -9,6 +9,7 @@ alternativas comentadas, abrangendo todo conteúdo... quero ir fazendo as quest�
 **Base de conteúdo:** os dois cadernos enviados pelo titular (LMP atualizada até 09/2026; Adm. Pública com STF/STJ até 2025). As leis de
 2025–2026 seguem o material de aula; a página avisa para conferir a redação oficial.
 
-## D-002 · Publicação para os alunos — ABERTA desde 12/11/2026
+## D-002 · Publicação para os alunos — DECIDIDA pelo titular em 12/11/2026, 09h39; execução bloqueada
 
-**Decide:** titular. **Trava:** link público. Hoje a aula é arquivo local (repositório privado).
+**Textual:** *"depois publique no GitHub"*. Repositório **público** com GitHub Pages (`index.html` na raiz leva à aula). A criação
+foi recusada pelo modo automático do Claude Code; o comando ficou com o titular.
