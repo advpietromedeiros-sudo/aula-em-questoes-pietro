@@ -19,6 +19,9 @@
   pode deixar sem a aba revisão"). As imagens reenviadas às 11h29 eram as mesmas três, com os mesmos erros. O código da revisão fica
   no modelo (aparece só se a fonte tiver `revisao`), para quando vierem imagens sem erro.
 
+- ✅ **12/11/2026, 11h5x — aba Revisão reativada com 50 itens Certo/Errado comentados** (25 LMP + 25 Adm. Pública; 24 C e 26 E;
+  ordem embaralhada sem alternância; placar do aluno, filtros e Zerar). O montador barra desequilíbrio e alternância. Teste 10/10.
+
 ## Próximos passos
 
 1. Titular revisar as questões em sala; ajustes vão em `fontes/lmp-e-adm-publica.json` e se remonta.

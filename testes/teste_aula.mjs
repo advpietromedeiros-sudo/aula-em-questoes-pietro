@@ -65,7 +65,34 @@ ok('A6 · tecla G abre a paleta de grifos', await av(`(()=>{const p=document.get
 await tecla('g');
 ok('A7 · texto justificado e negrito convertidos (sem ** na tela)', !(await av(`document.body.innerText.includes('**')`)) && /p,li,\.txt\{text-align:justify/.test(readFileSync(ARQ, 'utf8')));
 const R = D.revisao || [];
-if (!R.length) {
+const CE = D.ce || [];
+if (CE.length) {
+  await tecla('v'); await espera(800);
+  const ini = await av(`({n:document.querySelectorAll('.ce').length,plac:document.getElementById('ceplac').innerText})`);
+  let acertos = 0;
+  for (let i = 0; i < CE.length; i++) {  // o "aluno" acerta os ímpares e erra os pares
+    const g = i % 2 ? CE[i].gab : (CE[i].gab === 'C' ? 'E' : 'C'); if (g === CE[i].gab) acertos++;
+    await av(`document.querySelector('[data-ce="${i}"][data-g="${g}"]').click()`);
+  }
+  await espera(300);
+  const fim = await av(`({ok:document.querySelectorAll('.ce.ok').length,no:document.querySelectorAll('.ce.no').length,cm:document.querySelectorAll('.ce .cm').length,
+    plac:document.getElementById('ceplac').innerText,bloq:[...document.querySelectorAll('.ce .bts button')].every(b=>b.disabled)})`);
+  ok(`A9 · Revisão: ${CE.length} itens Certo/Errado; responder mostra acerto/erro e o comentário, e o placar conta (${acertos} acertos)`,
+    ini.n === CE.length && ini.plac.includes(`0/${CE.length}`) && fim.ok === acertos && fim.no === CE.length - acertos && fim.cm === CE.length && fim.bloq &&
+    fim.plac.includes(`${CE.length}/${CE.length} respondidos`) && fim.plac.includes(`${acertos} acertos`), JSON.stringify(fim));
+  await print('4-revisao-ce.png');
+  await av(`document.querySelector('[data-cef="errei"]').click()`); await espera(300);
+  const errei = await av(`document.querySelectorAll('.ce').length`);
+  await av(`document.querySelector('[data-cef="LMP"]').click()`); await espera(300);
+  const lmp = await av(`document.querySelectorAll('.ce').length`);
+  await av(`location.reload()`); await espera(2000);
+  const guardado = await av(`document.getElementById('ceplac') ? document.getElementById('ceplac').innerText : ''`);
+  await av(`document.querySelector('[data-cef="todos"]').click()`); await espera(200);
+  await av(`document.querySelector('[data-cez]').click()`); await espera(300);
+  const zer = await av(`document.getElementById('ceplac').innerText`);
+  ok('A10 · filtros (só os que errei, por assunto), placar guardado ao recarregar e Zerar', errei === CE.length - acertos && lmp === CE.filter(x => x.assunto === 'LMP').length &&
+    guardado.includes(`${acertos} acertos`) && zer.includes(`0/${CE.length}`), `${errei} ${lmp} | ${guardado.slice(0, 60)} | ${zer.slice(0, 30)}`);
+} else if (!R.length) {
   await tecla('v'); await espera(400);
   ok('A9 · aula sem revisão visual: sem botão Revisão e a tecla V não abre nada', !(await av(`!!document.getElementById('bRev')`)) && !(await av(`!!document.querySelector('.rev')`)));
 } else {

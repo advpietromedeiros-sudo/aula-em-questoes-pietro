@@ -55,6 +55,19 @@ def conferir(d: dict, nome: str) -> None:
         if not q.get("dica"):
             erros.append(f"q{i}: falta a dica do professor")
     erros += vicios(d)
+    ce = d.get("ce") or []
+    for i, x in enumerate(ce, 1):
+        if x.get("gab") not in ("C", "E") or not x.get("texto") or not x.get("coment") or x.get("assunto") not in d["assuntos"]:
+            erros.append(f"item C/E {i}: precisa de assunto, gab (C ou E), texto e coment")
+    if ce:
+        c = sum(x["gab"] == "C" for x in ce)
+        if not 0.4 <= c / len(ce) <= 0.6:
+            erros.append(f"itens C/E desequilibrados: {c} certos de {len(ce)}")
+        g = "".join(x["gab"] for x in ce)
+        alt = sum(a != b for a, b in zip(g, g[1:])) / max(1, len(g) - 1)
+        if alt > 0.7:
+            erros.append(f"gabarito C/E alterna demais ({alt:.0%}): embaralhe a ordem")
+        print(f"  itens C/E: {len(ce)} · certos {c} · errados {len(ce) - c} · alternância {alt:.0%}")
     vazios = [a for a in d["assuntos"] if not any(q["assunto"] == a for q in d["questoes"])]
     erros += [f"assunto sem questão: {a}" for a in vazios]
     if erros:
