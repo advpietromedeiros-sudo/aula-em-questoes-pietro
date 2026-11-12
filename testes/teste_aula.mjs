@@ -23,7 +23,7 @@ const tecla = async (key) => { const vk = { ArrowRight: 39, ArrowLeft: 37, Home:
   await cdp('Input.dispatchKeyEvent', { type: 'keyUp', key, windowsVirtualKeyCode: vk }); await espera(120); };
 const print = async n => { await espera(500); const r = await cdp('Page.captureScreenshot', { format: 'png' }); if (r.result) writeFileSync(join(PR, n), Buffer.from(r.result.data, 'base64')); };
 const res = []; const ok = (n, c, d = '') => { res.push(!!c); console.log(`${c ? 'OK   ' : 'FALHA'} ${n}${!c && d ? ' · ' + d : ''}`); };
-await cdp('Runtime.enable'); await cdp('Page.enable'); await cdp('Page.navigate', { url: pathToFileURL(ARQ).href }); await espera(2500);
+await cdp('Runtime.enable'); await cdp('Page.enable'); await cdp('Page.navigate', { url: process.env.AULA_URL || pathToFileURL(ARQ).href }); await espera(2500);
 
 ok('A1 · a capa lista as 16 questões, separadas por assunto', (await av(`document.querySelectorAll('.lista button').length`)) === D.questoes.length && (await av(`document.querySelectorAll('.capa .ass').length`)) === Object.keys(D.assuntos).length);
 await print('0-capa.png');
@@ -66,6 +66,9 @@ await tecla('g');
 ok('A7 · texto justificado e negrito convertidos (sem ** na tela)', !(await av(`document.body.innerText.includes('**')`)) && /p,li,\.txt\{text-align:justify/.test(readFileSync(ARQ, 'utf8')));
 const R = D.revisao || [];
 await tecla('v'); await espera(1500);
+// pela internet as miniaturas demoram mais; força o carregamento das que estão fora da tela e espera até 20 s
+await av(`document.querySelectorAll('.rev img').forEach(i=>i.loading='eager')`);
+for (let k = 0; k < 40 && (await av(`[...document.querySelectorAll('.rev img')].filter(i=>!(i.complete&&i.naturalWidth)).length`)) > 0; k++) await espera(500);
 const rv = await av(`({n:document.querySelectorAll('.rev figure').length,err:document.querySelectorAll('.rev .errata li').length,ok:document.querySelectorAll('.rev .semerro').length,
   carregou:[...document.querySelectorAll('.rev img')].filter(i=>i.complete&&i.naturalWidth>500).length})`);
 const nErr = R.reduce((a, r) => a + r.erratas.length, 0);
